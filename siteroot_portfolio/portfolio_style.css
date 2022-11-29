@@ -1,0 +1,4 @@
+@charset "UTF-8";
+body {font-family: "Lucida Grande"; background-color: #a7ebe3}
+	h1, h2, h3 {color:#4941b5 ; font-family: "Lucida Grande"}
+	.wrapper { width: 1100px; align-content: center; margin: auto auto;}
