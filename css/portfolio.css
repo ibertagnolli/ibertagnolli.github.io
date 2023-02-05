@@ -577,6 +577,7 @@ pre code {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4232,6 +4233,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
+  padding-bottom: 10px;
   list-style: none;
 }
 
