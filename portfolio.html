@@ -11,7 +11,7 @@
 <link href="css/portfolio.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:   #581545"> <a class="navbar-brand" href="index.html">Isabella Bertagnolli</a>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:   #581545"> <a class="navbar-brand" href="index.html">Isabella Bertagnolli</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -39,64 +39,165 @@
   </div>
 </div>
 <!---</div>--> 
-<!-- Jumbotron -->
+<!-- Carousel -->
 <div class="container">
-  <hr>
-  <br>
-  <div class="row">
-    <div class="col-md-4">
+	<hr>
+	<br>
+	<h1 style="text-align: center"> Art Portfolio</h1>
+</div>
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item ">
+      <div class="cards-wrapper">
+		 <div class="col-md-4">
       <div class="card bg-dark"> <img class="card-img-top" src="images/9DEEA46F-11A6-4140-847D-F51FC170A874.jpg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Portrait of Alex</h5>
-          <p class="card-text">Oil and Acrylic on Wood</p>
-          <p class="card-text">This is a portrait of my sister I did that was entered into a show at local gallery in Salt Lake.</p>
+          <h5 class="card-title">Plants Vs Zombies</h5>
+          <p class="card-text">This game was made for a school project in 2020 using Java and C#.</p>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+        <div class="col-md-4">
       <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_1921.JPG" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Persephone</h5>
-          <p class="card-text">Acrylic on canvas</p>
+          <p class="card-subtitle">Acrylic on canvas</p>
           <p class="card-text">A still life practice I did over winter break and still one of my favorite pieces. </p>
         </div>
       </div>
     </div>
-    <br>
-    <br/>
-    <div class="col-md-4">
+       <div class="col-md-4">
       <div class="card bg-dark"> <img class="card-img-top" src="images/DSC_0150.JPG" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Black Lagoon</h5>
-          <p class="card-text">Acrylic on canvas</p>
+          <p class="card-subtitle">Acrylic on canvas</p>
           <p class="card-text">I did a series of sirens and mermaids for an art portfolio a couple years ago, this is one of my favoritrs from that series.</p>
         </div>
+	</div>
+    </div>
+    </div>
+    </div>
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+		   <div class="col-md-4">
+      <div class="card bg-dark"> 
+		  <img class="card-img-top" src="images/aboutimg.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Website</h5>
+            <p class="card-text"> My github repo for this website using HTML, CSS and Javascript. Hosted through github pages.</p>
+            <a href="#" class="btn btn-light">View Code</a>
+          </div>
+        </div>
+		  </div>
+       	   <div class="col-md-4">
+      <div class="card bg-dark"> 
+		  <img class="card-img-top" src="images/Screen Shot 2023-03-06 at 4.00.26 PM.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Recycling Game</h5>
+            <p class="card-text"> My github repo for an educational recycling game that teaches kids about recycling in Salt Lake City. Built with C++. </p>
+            <a href="#" class="btn btn-light">View Code</a>
+          </div>
+        </div>
+		  </div>
+		    <div class="col-md-4">
+        <div class="card bg-dark"> 
+		  <img class="card-img-top" src="images/Screen Shot 2023-02-24 at 10.18.11 AM.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Health App</h5>
+            <p class="card-text"> A fitness app designed to help people track calories, weather and hiking. Made in Kotlin using android studio, in the works of transferring to swift for multi-platform use. </p>
+            <a href="#" class="btn btn-light">View Code</a>
+          </div>
+        </div>
+		  </div>
+		  
       </div>
     </div>
   </div>
-  <br/>
-  <br/>
-</div>
-<div class="container-fluid bg-3 text-center">
-  <section class="section-wrapper section-interest gray-bg" style="background-color: #f9f9f9;">
-    <h3>Some of my Work</h3>
-    <br>
-    <div class="row">
-      <div class="col-sm-4">
-        <p>A photoshop collage done for my Art X 2000 class.</p>
-        <img src="images/collage_bertagnolli.jpg" class="img-responsive" style="width:100%" alt="Image"> </div>
-      <div class="col-sm-4">
-        <p>A personal logo done for my Art X 2000 class.</p>
-        <img src="images/Logo.jpg" class="img-responsive" style="width:100%" alt="Image"> </div>
-      <div class="col-sm-4">
-        <p>A video project done for my art x 2000 class.</p>
-        <video width="350" height="300" controls="controls" >
-          <source src="images/project3_final.mp4" type="video/mp4">
-        </video>
+				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+	
+	</div>
+		<div id="carouselExample2" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active ">
+      <div class="cards-wrapper">
+		 <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/9DEEA46F-11A6-4140-847D-F51FC170A874.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Portrait of Alex</h5>
+          <p class="card-subtitle">Oil and Acrylic on Wood</p>
+          <p class="card-text">This is a portrait of my sister I did that was entered into a show at local gallery in Salt Lake.</p>
+        </div>
       </div>
     </div>
-  </section>
-</div>
+        <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_1921.JPG" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Persephone</h5>
+          <p class="card-subtitle">Acrylic on canvas</p>
+          <p class="card-text">A still life practice I did over winter break and still one of my favorite pieces. </p>
+        </div>
+      </div>
+    </div>
+       <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/DSC_0150.JPG" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Black Lagoon</h5>
+          <p class="card-subtitle">Acrylic on canvas</p>
+          <p class="card-text">I did a series of sirens and mermaids for an art portfolio a couple years ago, this is one of my favoritrs from that series.</p>
+        </div>
+	</div>
+    </div>
+    </div>
+    </div>
+		  <div class="carousel-item ">
+      <div class="cards-wrapper">
+		 <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_6664.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Portrait of Alex 2</h5>
+          <p class="card-subtitle">Oil and Acrylic on Canvas</p>
+          <p class="card-text">This is a portrait of my sister it is 5' tall by 4' wide done with acrylic and oil over 3 months. It was entered into a show at local gallery in Springville</p>
+        </div>
+      </div>
+    </div>
+		   <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_5663.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Rainbow Vision</h5>
+          <p class="card-subtitle">Watercolor on paper</p>
+          <p class="card-text">This is a small watercolor I did for fun a while back to play with colors.</p>
+        </div>
+      </div>
+    </div>
+		   <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_5685.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Eye</h5>
+          <p class="card-subtitle">pen on paper</p>
+          <p class="card-text">Another eye sketch</p>
+        </div>
+      </div>
+    </div>
+    </div>
+		</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExample2" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+		</div>
+
 <br>
 <footer class="container-fluid text-center"> <br>
   <hr>
