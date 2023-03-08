@@ -4959,6 +4959,27 @@ input[type="button"].btn-block {
   }
 }
 /* Carousel CSS */
+@media (min-width: 576px) {
+  .cards-wrapper {
+  -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+	}
+  }
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
 .cards-wrapper {
   display: flex;
   justify-content: center;
@@ -4972,6 +4993,8 @@ input[type="button"].btn-block {
 }
 .carousel-inner {
   padding: 1em;
+  
+ 
 }
 
 
@@ -6601,6 +6624,7 @@ a.close.disabled {
     transition: none;
   }
 }
+
 
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
