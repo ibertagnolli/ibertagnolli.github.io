@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/blog.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:   #581545"> <a class="navbar-brand" href="index.html">Isabella Bertagnolli</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"> <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="portfolio.html">Projects<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Resume.html">Resume<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Blog.html">Blog<span class="sr-only">(current)</span></a> </li>
+    </ul>
+  </div>
+</nav>
+<div id="main-wrapper"> 
+  <!-- body code goes here -->
+  <section class="section-wrapper section-interest gray-bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <div class="section-title">
+              <h1>I Competed in the ICPC, Here is What I Learned</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-wrapper section-education">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2>Introduction</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p> A few weeks ago I got the opportunity to compete in the ICPC(inter collegiate programming competition). I went into the experience with low expectations and a lack of enthusiasm. Having just started my algorithms curriculum I was unsure if I would be able to contribute to my team in a useful way. However at the end of the competition my team placed 14th in our region and had solved half of the available problems. We were by no means the top team but I was surprised at how much we had accomplished in the short 5 hours.</p>
+<p>
+Having never done a programming competition before I didn’t really know what to expect but there were a number of easier problems that just required basic knowledge of modular arithmetic. One tip we got before the competition was to look at the leaderboard early on to see what easy questions were solvable quickly. The faster you solve problems the more points you get overall. In the first two hours we solved 4 problems. 2 that were fairly simple and 2 others that were more moderate in difficulty. This left 8 more problems available.
+			</p>
+			<p>
+We spent the next two hours writing and debugging code for 3 other problems. I think this is where we initially went wrong. We had ideas for many of the problems and were trying to diversify and solve many on paper. With only one computer, we should’ve been focused on nailing down solutions to one or two more problems instead of reading a bunch of problem descriptions and trying to come up with ideas. I am going to talk about some of the problems we solved and our approaches. As well as, some problems we struggled with and why.
+			</p><p>
+I’ll add the links to the problem descriptions as well so you can read along and try them for yourself if you’d like. You may want to read the prompts before reading my commentary on the approaches and solutions below. I also want to give a huge shoutout to my team members Aaron and Herb for competing with me. </p>
+          <p>For more informative graphics and resources check out the full article on my medium <a href="https://medium.com/@irosebertagnolli/i-competed-in-icpc-and-heres-what-i-learned-140a4acab41c">here</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-wrapper section-interest gray-bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2>Problem A Blueberry Waffle</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+One of the problems that was super easy and didn’t take us very long was problem A. This problem was literally 2 lines of code and was essentially a modular arithmetic problem. Here is the problem and the code.
+
+https://open.kattis.com/problems/blueberrywaffle
+
+r, f = [int(i) for i in input().split(' ')]
+print(['up', 'down'][round(f/r)%2])
+			  </p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="section-wrapper section-education">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2>Problem B Branch Manager </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+This problem was solved by at least 8 teams so we knew it was possible to solve. Originally after reading the problem description I thought we would need to do a modified DFS to keep track of the cost of going through each road in a city and then returning the maximum cost of the paths. However after reading the problem again 30 minutes later after writing some dfs pseudo code my teammates pointed out that the graph might not be a DAG and could have negative edge weights. Meaning this problem needed to be solved using Bellman-fords algorithm. The problem stated that “there could be an edge from u to v and from v to u but the road could only be traverse in one direction” this caused some confusion and we ended up abandoning the problem altogether. Turns out bellman ford was the right approach.
+
+<a href="https://open.kattis.com/problems/branchmanager"> Branch Manager Description</a> </p>
+      </div>
+    </div>
+  </div>
+</section>
+	 <section class="section-wrapper section-interest gray-bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2>Problem K Everything is a Nail</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+I originally approached this problem with a greedy solution using double for loops. After trying the greedy solution and failing a hidden test we realized a dynamic programming a solution was needed to determine the optimal way to order the tools in your toolbelt. This conversion didn’t take too much time. We just calculated all the permutations of the tools in the tool belt and ran our DP solution on each one to find the maximum number of jobs fixed and returned that number. The solution passed after that refactoring. One thing to note is that failing a submission gave us a 20 minute penalty on time scoring.
+
+			  <a href = "https://open.kattis.com/problems/everythingisanail"> problem k description </a> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="section-wrapper section-interest gray-bg">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2>Conclusion</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p> By no means am I an expert at interviewing in any way shape or form. Just another student looking for a job out of college. These are some of the things that have helped me. In particular joining a club or a group that does regular practice has been the most helpful for me because it holds me accountable and is easy to schedule time for. I’ll link some resources down below for preparation purposes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+	</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="siteroot_portfolio/js/popper.min.js"></script> 
+<script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
+</body>
+</html><!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>blogICPC.html</title>
+</head>
+
+<body>
+</body>
+</html>
