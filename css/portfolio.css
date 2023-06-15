@@ -5337,6 +5337,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 url("../images/ezgif.com-resize.jpg");
 background-repeat: no-repeat;
 background-attachment: fixed;
+background-size: cover;
 color:white !important;
 height:80vh;
 width: 100vw;
