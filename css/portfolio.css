@@ -5343,10 +5343,9 @@ width: 100vw;
 background-position: 100% 50%;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 300px) {
   .jumbotron{
 	background-size: cover;
-    background-position: 100% 100%;
   }
 }
 /* BUTTON STYLE HERE */
