@@ -5337,10 +5337,17 @@ a.badge-dark:focus, a.badge-dark.focus {
 url("../images/ezgif.com-resize.jpg");
 background-repeat: no-repeat;
 background-attachment: fixed;
-background-size: cover;
 color:white !important;
 height:80vh;
 width: 100vw;
+background-position: 100% 50%;
+}
+
+@media (max-width: 500px) {
+  .jumbotron{
+	background-size: cover;
+    background-position: 100% 100%;
+  }
 }
 /* BUTTON STYLE HERE */
 .btn{
