@@ -5334,12 +5334,13 @@ a.badge-dark:focus, a.badge-dark.focus {
 /* JUMBOTRON STYLE HERE */
 .jumbotron{
   background: 
-url("../images/ezgif.com-resize.jpg");
+url("../images/computer_img.jpg");
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
+/*filter: brightness(0.5);*/
 color:white !important;
-height:80vh;
+height:100vh;
 width: 100vw;
 background-position: 100% 50%;
 }
