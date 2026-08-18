@@ -16,14 +16,62 @@
       color: #2c3e50;
     }
 
-    .contact-card {
+    /* Top Profile Section */
+    .profile-img-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-img-container img {
+      width: 100%;
+      height: 100%;
+      max-height: 380px;
+      object-fit: cover;
+    }
+
+    .contact-info-card {
+      background-color: #f7f5f0;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+    .contact-info-card h2 {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 12px;
+    }
+
+    .contact-info-card p {
+      color: #4a5568;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info-card a {
+      color: #2c3e50;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    /* Bottom Form Section */
+    .form-wrapper-section {
+      background-color: #f7f5f0;
+      padding: 50px 0;
+      margin-top: 50px;
+    }
+
+    .form-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       padding: 40px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-      margin-top: 40px;
-      margin-bottom: 60px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     .form-control {
@@ -43,7 +91,7 @@
       background-color: #2c3e50;
       color: #ffffff;
       border: none;
-      padding: 10px 28px;
+      padding: 10px 32px;
       font-weight: 600;
       border-radius: 4px;
       transition: background-color 0.2s ease;
@@ -52,30 +100,6 @@
     .btn-submit:hover {
       background-color: #1a252f;
       color: #ffffff;
-    }
-
-    .contact-info-block {
-      background-color: #f7f5f0;
-      border-radius: 8px;
-      padding: 30px;
-      height: 100%;
-    }
-
-    .contact-info-block h4 {
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 16px;
-    }
-
-    .contact-info-block p {
-      color: #4a5568;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .contact-info-block a {
-      color: #2c3e50;
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -101,71 +125,82 @@
   </nav>
 
   <div class="container" style="margin-top: 110px;">
-    <div class="text-center">
-      <h1 style="color: #2c3e50; font-weight: 700;">Get in Touch</h1>
-      <p class="lead" style="color: #718096;">Have a question, project idea, or art inquiry? Send me a message below!</p>
-    </div>
-    <hr style="margin-top: 25px; margin-bottom: 20px;">
-  </div>
-
-  <div class="container">
-    <div class="contact-card">
-      <div class="row">
-
-        <div class="col-lg-7 mb-4 mb-lg-0">
-          <form action="https://formspree.io/f/xdenpnrp" method="POST">
-            <div class="form-group">
-              <label for="name" style="font-weight: 600; color: #2c3e50;">Name</label>
-              <input type="text" name="name" id="name" class="form-control" placeholder="Your name" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email" style="font-weight: 600; color: #2c3e50;">Email Address</label>
-              <input type="email" name="_replyto" id="email" class="form-control" placeholder="name@example.com" required>
-            </div>
-
-            <div class="form-group">
-              <label for="subject" style="font-weight: 600; color: #2c3e50;">Subject</label>
-              <input type="text" name="subject" id="subject" class="form-control" placeholder="Software inquiry, art commission, etc.">
-            </div>
-
-            <div class="form-group">
-              <label for="message" style="font-weight: 600; color: #2c3e50;">Message</label>
-              <textarea name="message" id="message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-submit mt-2">Send Message</button>
-          </form>
+    <div class="row align-items-center">
+      <div class="col-md-5 mb-4 mb-md-0">
+        <div class="profile-img-container">
+          <img src="images/IMG_1039.jpg" alt="Isabella Bertagnolli">
         </div>
+      </div>
 
-        <div class="col-lg-5">
-          <div class="contact-info-block">
-            <h4>Direct Contact</h4>
-            <p>
-              Feel free to reach out directly via email or connect through LinkedIn / GitHub:
-            </p>
-            <p>
-              <strong>General / Software:</strong><br>
-              <a href="mailto:Irosebertagnolli@gmail.com">Irosebertagnolli@gmail.com</a>
-            </p>
-            <p>
-              <strong>Art Inquiries:</strong><br>
-              <a href="mailto:bella.bert.art@gmail.com">bella.bert.art@gmail.com</a>
-            </p>
-            <hr style="border-color: #e2e8f0; margin: 20px 0;">
-            <p>
-              <strong>Social & Code:</strong><br>
-              <a href="https://github.com/ibertagnolli" target="_blank">github.com/ibertagnolli</a><br>
-              <a href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" target="_blank">linkedin.com/in/isabella-bertagnolli</a>
-            </p>
-          </div>
+      <div class="col-md-7">
+        <div class="contact-info-card">
+          <h2>Let's Connect!</h2>
+          <p>
+            Whether you have a question about my software engineering projects, want to collaborate, or are interested in original artwork and commissions, I'd love to hear from you!
+          </p>
+          <hr style="border-color: #e2e8f0; margin: 15px 0;">
+          <p class="mb-2">
+            <strong>General / Software Inquiries:</strong><br>
+            <a href="mailto:Irosebertagnolli@gmail.com">Irosebertagnolli@gmail.com</a>
+          </p>
+          <p class="mb-2">
+            <strong>Art Inquiries & Commissions:</strong><br>
+            <a href="mailto:bella.bert.art@gmail.com">bella.bert.art@gmail.com</a>
+          </p>
+          <p class="mb-0">
+            <strong>Social & Code:</strong><br>
+            <a href="https://github.com/ibertagnolli" target="_blank">github.com/ibertagnolli</a> &middot;
+            <a href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" target="_blank">linkedin.com/in/isabella-bertagnolli</a>
+          </p>
         </div>
-
       </div>
     </div>
   </div>
 
-  <footer class="container-fluid text-center" style="padding-bottom: 40px;">
+  <section class="form-wrapper-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="text-center mb-4">
+            <h2 style="font-weight: 700; color: #2c3e50;">Send a Message</h2>
+            <p style="color: #718096;">Fill out the form below and I'll get back to you as soon as possible.</p>
+          </div>
+
+          <div class="form-card">
+            <form action="https://formspree.io/f/xdenpnrp" method="POST">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name" style="font-weight: 600; color: #2c3e50;">Your Name</label>
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email" style="font-weight: 600; color: #2c3e50;">Your Email Address</label>
+                  <input type="email" name="_replyto" id="email" class="form-control" placeholder="name@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" style="font-weight: 600; color: #2c3e50;">Subject</label>
+                <input type="text" name="subject" id="subject" class="form-control" placeholder="Project Inquiry / Hello">
+              </div>
+
+              <div class="form-group">
+                <label for="message" style="font-weight: 600; color: #2c3e50;">Message</label>
+                <textarea name="message" id="message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container-fluid text-center" style="padding: 30px 0 40px 0;">
     <hr>
     <div class="row">
       <div class="text-center col-lg-6 offset-lg-3">
