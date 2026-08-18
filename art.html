@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Art Gallery - Isabella Bertagnolli</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
     <link href="css/portfolio.css" rel="stylesheet">
 
@@ -26,8 +25,8 @@
 
         .art-img-container {
             width: 100%;
-            height: 320px;
-            /* Fixed height for uniform size */
+            height: 260px;
+            /* Proportional fixed height for 4-column layout */
             overflow: hidden;
             border-radius: 4px;
             background-color: #f7f5f0;
@@ -47,14 +46,14 @@
         }
 
         .art-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             color: #2c3539;
             margin-bottom: 2px;
         }
 
         .art-medium {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #718096;
             margin-bottom: 0;
         }
@@ -63,7 +62,6 @@
 
 <body>
 
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top"
         style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Isabella Bertagnolli</a>
@@ -75,8 +73,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"> <a class="nav-link" href="about.html" style="color: #4a5568;">About</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="Contact.html" style="color: #4a5568;">Contact</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a>
-                </li>
+                <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="art.html" style="color: #4a5568;">Art</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="Resume.html" style="color: #4a5568;">Resume</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="Blog.html" style="color: #4a5568;">Blog</a> </li>
@@ -84,7 +81,6 @@
         </div>
     </nav>
 
-    <!-- King Arthur Jumbotron Header -->
     <div class="p-5 text-center bg-image rounded-3" style="
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('images/art/King\ Arthur.jpg'); 
     background-size: cover;
@@ -102,8 +98,8 @@
             </div>
         </div>
     </div>
-    <!-- Page Title Header -->
-    <div class="container" style="margin-top: 40px; margin-bottom: 40px;">
+
+    <div class="container-fluid" style="max-width: 1400px; margin-top: 40px; margin-bottom: 40px;">
         <div class="text-center">
             <h1 style="color: #2c3e50; font-weight: 700;">Art Gallery</h1>
             <p class="lead" style="color: #718096;">Paintings, drawings, apparel, and visual works</p>
@@ -111,12 +107,10 @@
         <hr style="margin-top: 30px; margin-bottom: 40px;">
     </div>
 
-    <!-- Gallery Grid -->
-    <div class="container">
+    <div class="container-fluid" style="max-width: 1400px;">
         <div class="row">
 
-            <!-- ==================== GROUP 1: ARTHURIAN LEGEND SERIES ==================== -->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Lady of the Lake.jpg" alt="Lady of the Lake">
@@ -127,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/King Arthur.jpg" alt="King Arthur">
@@ -138,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Holy Grail.jpg" alt="Holy Grail">
@@ -149,7 +143,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Excalibur.jpg" alt="Excalibur">
@@ -160,7 +154,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Nimue.jpg" alt="Nimue">
@@ -171,8 +165,7 @@
                 </div>
             </div>
 
-
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/bluesiren.jpg" alt="Blue Siren">
@@ -183,7 +176,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="images/DSC_0150.JPG" alt="Black Lagoon">
@@ -195,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Hades.png" alt="Hades">
@@ -206,7 +199,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="images/IMG_1921.JPG" alt="Persephone">
@@ -218,19 +211,18 @@
                 </div>
             </div>
 
-            <!-- ==================== GROUP 2: UFO & SURREAL DRINKS SERIES ==================== -->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
-                        <img src="/images/cigarette.jpg" alt="Nimue">
+                        <img src="/images/cigarette.jpg" alt="Cigarette">
                     </div>
                     <div class="art-caption">
-                        <div class="art-title">Nimue</div>
+                        <div class="art-title">Cigarette</div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Martini_UFO.png" alt="UFO Martini">
@@ -241,7 +233,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Highball_UFO.png" alt="UFO Highball">
@@ -252,7 +244,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Baba_Yaga_Coffee.png" alt="Baba Yaga Coffee">
@@ -263,7 +255,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Eeel_On_Tap.png" alt="Eel On Tap">
@@ -274,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Death_Decanter.png" alt="Death Decanter">
@@ -284,20 +276,19 @@
                     </div>
                 </div>
             </div>
-             <div class="col-md-4 col-sm-6">
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
-                        <img src="/images/art/UFO_COW.JPG" alt="UFO Cow Version">
+                        <img src="/images/art/UFO_COW.JPG" alt="UFO Cow">
                     </div>
                     <div class="art-caption">
-                        <div class="art-title">Death Decanter</div>
+                        <div class="art-title">UFO Cow</div>
                     </div>
                 </div>
             </div>
 
-            
-            
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/void.JPG" alt="Void">
@@ -308,7 +299,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/HornsFront.JPG" alt="Horns (Front)">
@@ -319,7 +310,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/HornsBack.JPG" alt="Horns (Back)">
@@ -330,7 +321,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/undergrowth_up_front.jpg" alt="Undergrowth (Front)">
@@ -341,7 +332,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/undergrowth_down_back.jpg" alt="Undergrowth (Back)">
@@ -352,7 +343,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/Under_the_surface_front.jpg" alt="Under the Surface (Front)">
@@ -363,7 +354,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/under_the_surface_back.jpg" alt="Under the Surface (Back)">
@@ -374,8 +365,7 @@
                 </div>
             </div>
 
-            <!-- ==================== GROUP 5: FINE ART & OTHER WORKS ==================== -->
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="/images/art/caged_butterfly.JPG" alt="Caged Butterfly">
@@ -386,7 +376,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="images/cigarette.jpg" alt="Portrait of Alex">
@@ -398,7 +388,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
                     <div class="art-img-container">
                         <img src="images/IMG_6664.jpeg" alt="Portrait of Alex 2">
@@ -413,18 +403,15 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="container-fluid text-center" style="margin-top: 60px; padding-bottom: 40px;">
         <hr>
         <div class="row">
             <div class="text-center col-lg-6 offset-lg-3">
-                <p style="color:black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#">bella
-                        bertagnolli</a></p>
+                <p style="color:black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#">bella bertagnolli</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
     <script src="siteroot_portfolio/js/popper.min.js"></script>
     <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>

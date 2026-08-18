@@ -1,107 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact</title>
-<!-- Bootstrap -->
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-<link href="css/contact.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Isabella Bertagnolli</title>
+
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="css/portfolio.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #2c3e50;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    .form-control {
+      border: 1px solid #cbd5e0;
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 0.95rem;
+      color: #2c3e50;
+    }
+
+    .form-control:focus {
+      border-color: #2c3e50;
+      box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.15);
+    }
+
+    .btn-submit {
+      background-color: #2c3e50;
+      color: #ffffff;
+      border: none;
+      padding: 10px 28px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #1a252f;
+      color: #ffffff;
+    }
+
+    .contact-info-block {
+      background-color: #f7f5f0;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+    }
+
+    .contact-info-block h4 {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 16px;
+    }
+
+    .contact-info-block p {
+      color: #4a5568;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .contact-info-block a {
+      color: #2c3e50;
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);"> 
-  <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Isabella Bertagnolli</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
-    <span class="navbar-toggler-icon"></span> 
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item"> <a class="nav-link" href="about.html" style="color: #4a5568;">About</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Contact.html" style="color: #4a5568;">Contact</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="art.html" style="color: #4a5568;">Art</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Resume.html" style="color: #4a5568;">Resume</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Blog.html" style="color: #4a5568;">Blog</a> </li>
-    </ul>
-  </div>
-</nav>
-<div id="main-wrapper"> 
-  <!---<div class="card-deck"  style="padding:20px;">-->
-  <div class="columns-block">
-    <div class="left-col-block blocks">
-      <header class="header">
-        <div class="profile-image"> 
-          <!---<div class="profile-img"></div>--> 
-          <img style="min-width:650px; width: 100%; object-fit: cover;" class="profile-photo" src = "images/IMG_1106-Edit.jpg" alt="profile photo"/> </div>
-      </header>
-      <!-- .header--> 
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+    style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Isabella Bertagnolli</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"> <a class="nav-link" href="about.html" style="color: #4a5568;">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="Contact.html" style="color: #4a5568;">Contact</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="art.html" style="color: #4a5568;">Art</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="Resume.html" style="color: #4a5568;">Resume</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="Blog.html" style="color: #4a5568;">Blog</a> </li>
+      </ul>
     </div>
+  </nav>
+
+  <div class="container" style="margin-top: 110px;">
+    <div class="text-center">
+      <h1 style="color: #2c3e50; font-weight: 700;">Get in Touch</h1>
+      <p class="lead" style="color: #718096;">Have a question, project idea, or art inquiry? Send me a message below!</p>
+    </div>
+    <hr style="margin-top: 25px; margin-bottom: 20px;">
   </div>
-  <div class="right-col-block blocks">
-    <div class="card-deck"  style="padding:20px;">
-      <div class="card" style="min-width: 40rem">
-        <div class="card-body">
-          <h2>Contact Me</h2>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <address>
-              <strong>Phone Number</strong><br>
-              801-495-3221
-              </address>
-            </li>
-            <li class="list-group-item">
-              <address>
-              <strong>Email</strong><br>
-              <a href="mailto:#">irosebertagnolli@gmail.com</a>
-              </address>
-            </li>
-			  <li class="list-group-item">
-				   <a  href="https://github.com/ibertagnolli" role="button" target="_blank">  Github</a>
-			  </li>
-			  <li class="list-group-item">
-				     <a  href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/"
-	   role="button" target="_blank">  LinkedIn</a>
-			  </li>
-          </ul>
+
+  <div class="container">
+    <div class="contact-card">
+      <div class="row">
+
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <form action="https://formspree.io/f/xdenpnrp" method="POST">
+            <div class="form-group">
+              <label for="name" style="font-weight: 600; color: #2c3e50;">Name</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" style="font-weight: 600; color: #2c3e50;">Email Address</label>
+              <input type="email" name="_replyto" id="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" style="font-weight: 600; color: #2c3e50;">Subject</label>
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="Software inquiry, art commission, etc.">
+            </div>
+
+            <div class="form-group">
+              <label for="message" style="font-weight: 600; color: #2c3e50;">Message</label>
+              <textarea name="message" id="message" rows="5" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit mt-2">Send Message</button>
+          </form>
         </div>
-      </div>
-      <div class="card" style="min-width:40rem;">
-        <div class="card-body">
-          <div class="feedback-form">
-            <h2>Get in touch</h2>
-            <form id="contactForm" action="sendemail.php" method="POST">
-              <div class="form-group">
-                <label for="InputName">Name</label>
-                <input type="text" name="name" required="" class="form-control" id="InputName" placeholder="Full Name">
-              </div>
-              <div class="form-group">
-                <label for="InputEmail">Email address</label>
-                <input type="email" name="email" required="" class="form-control" id="InputEmail" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="InputSubject">Subject</label>
-                <input type="text" name="subject" class="form-control" id="InputSubject" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="control-label">Message</label>
-                <textarea class="form-control" rows="4" required="" name="message" id="message-text" placeholder="Write message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+
+        <div class="col-lg-5">
+          <div class="contact-info-block">
+            <h4>Direct Contact</h4>
+            <p>
+              Feel free to reach out directly via email or connect through LinkedIn / GitHub:
+            </p>
+            <p>
+              <strong>General / Software:</strong><br>
+              <a href="mailto:Irosebertagnolli@gmail.com">Irosebertagnolli@gmail.com</a>
+            </p>
+            <p>
+              <strong>Art Inquiries:</strong><br>
+              <a href="mailto:bella.bert.art@gmail.com">bella.bert.art@gmail.com</a>
+            </p>
+            <hr style="border-color: #e2e8f0; margin: 20px 0;">
+            <p>
+              <strong>Social & Code:</strong><br>
+              <a href="https://github.com/ibertagnolli" target="_blank">github.com/ibertagnolli</a><br>
+              <a href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" target="_blank">linkedin.com/in/isabella-bertagnolli</a>
+            </p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
-</div>
-<p><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-  <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script> 
-  
-  <!-- Include all compiled plugins (below), or include individual files as needed --> 
-  
-  <script src="siteroot_portfolio/js/popper.min.js"></script> 
-  <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script> 
-</p>
+
+  <footer class="container-fluid text-center" style="padding-bottom: 40px;">
+    <hr>
+    <div class="row">
+      <div class="text-center col-lg-6 offset-lg-3">
+        <p style="color:black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#">bella bertagnolli</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
+  <script src="siteroot_portfolio/js/popper.min.js"></script>
+  <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
 </body>
+
 </html>
