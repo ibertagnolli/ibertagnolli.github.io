@@ -4,101 +4,201 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact</title>
+<title>Contact - Isabella Bertagnolli</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
 <!-- Bootstrap -->
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 <link href="css/contact.css" rel="stylesheet">
+
+<!--  Favicon --> 
+<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
+<style>
+  body {
+    background-color: #ffffff;
+    color: #2c3e50;
+  }
+
+  /* Right-hand side container & card styling */
+  .right-col-block .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-contact-info {
+    margin-bottom: 40px; /* Distinct spacing between the two sections */
+  }
+
+  /* Heading & label color fixes */
+  .card-body h2 {
+    color: #2c3e50 !important;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    color: #2c3e50 !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .list-group-item {
+    border-color: #edf2f7;
+    padding: 14px 20px;
+  }
+
+  .list-group-item strong {
+    color: #2c3e50;
+    font-size: 0.95rem;
+  }
+
+  .list-group-item a {
+    color: #4a5568;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .list-group-item a:hover {
+    color: #2c3e50;
+  }
+
+  .form-control {
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    color: #2c3e50;
+  }
+
+  .form-control:focus {
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 0.2rem rgba(44, 62, 80, 0.15);
+  }
+
+  /* Rounded pill button styled in theme */
+  .btn-submit-rounded {
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 50px; /* Pill roundness */
+    padding: 10px 32px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-submit-rounded:hover {
+    background-color: #1a252f;
+    border-color: #1a252f;
+    color: #ffffff;
+  }
+</style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:   #581545"> <a class="navbar-brand" href="index.html">Isabella Bertagnolli</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);"> 
+  <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Isabella Bertagnolli</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+    <span class="navbar-toggler-icon"></span> 
+  </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"> <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Contact.html" target="_blank">Contact<span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"> <a class="nav-link" href="portfolio.html">Projects<span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Resume.html">Resume<span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"> <a class="nav-link" href="Blog.html">Blog<span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="about.html" style="color: #4a5568;">About</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Contact.html" style="color: #4a5568;">Contact</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="art.html" style="color: #4a5568;">Art</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Resume.html" style="color: #4a5568;">Resume</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="Blog.html" style="color: #4a5568;">Blog</a> </li>
     </ul>
   </div>
 </nav>
+
 <div id="main-wrapper"> 
-  <!---<div class="card-deck"  style="padding:20px;">-->
   <div class="columns-block">
+    <!-- Left Photo Block -->
     <div class="left-col-block blocks">
       <header class="header">
         <div class="profile-image"> 
-          <!---<div class="profile-img"></div>--> 
-          <img style="min-width:650px; width: 100%; object-fit: cover;" class="profile-photo" src = "images/DSC_9124.jpg" alt="profile photo"/> </div>
+          <img style="min-width:650px; width: 100%; object-fit: cover;" class="profile-photo" src="images/IMG_1686-Edit.jpg" alt="Isabella Bertagnolli"/> 
+        </div>
       </header>
-      <!-- .header--> 
     </div>
   </div>
+
+  <!-- Right Content Block -->
   <div class="right-col-block blocks">
-    <div class="card-deck"  style="padding:20px;">
-      <div class="card" style="min-width: 40rem">
+    <div style="padding: 30px 25px 60px 25px;">
+      
+      <!-- Contact Info Card -->
+      <div class="card card-contact-info">
         <div class="card-body">
           <h2>Contact Me</h2>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <address>
-              <strong>Phone Number</strong><br>
-              801-495-3221
+              <address class="mb-0">
+                <strong>Phone Number</strong><br>
+                <span>801-495-3221</span>
               </address>
             </li>
             <li class="list-group-item">
-              <address>
-              <strong>Email</strong><br>
-              <a href="mailto:#">irosebertagnolli@gmail.com</a>
+              <address class="mb-0">
+                <strong>Email</strong><br>
+                <a href="mailto:irosebertagnolli@gmail.com">irosebertagnolli@gmail.com</a>
               </address>
             </li>
-			  <li class="list-group-item">
-				   <a  href="https://github.com/ibertagnolli" role="button" target="_blank">  Github</a>
-			  </li>
-			  <li class="list-group-item">
-				     <a  href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/"
-	   role="button" target="_blank">  LinkedIn</a>
-			  </li>
+            <li class="list-group-item">
+              <a href="https://github.com/ibertagnolli" target="_blank">Github</a>
+            </li>
+            <li class="list-group-item">
+              <a href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" target="_blank">LinkedIn</a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="card" style="min-width:40rem;">
+
+      <!-- Formspree Contact Form Card -->
+      <div class="card">
         <div class="card-body">
           <div class="feedback-form">
             <h2>Get in touch</h2>
-            <form id="contactForm" action="sendemail.php" method="POST">
+            <form id="contactForm" action="https://formspree.io/f/xdenpnrp" method="POST">
               <div class="form-group">
                 <label for="InputName">Name</label>
-                <input type="text" name="name" required="" class="form-control" id="InputName" placeholder="Full Name">
+                <input type="text" name="name" required class="form-control" id="InputName" placeholder="Full Name">
               </div>
               <div class="form-group">
                 <label for="InputEmail">Email address</label>
-                <input type="email" name="email" required="" class="form-control" id="InputEmail" placeholder="Email">
+                <input type="email" name="_replyto" required class="form-control" id="InputEmail" placeholder="Email">
               </div>
               <div class="form-group">
                 <label for="InputSubject">Subject</label>
                 <input type="text" name="subject" class="form-control" id="InputSubject" placeholder="Subject">
               </div>
               <div class="form-group">
-                <label for="message-text" class="control-label">Message</label>
-                <textarea class="form-control" rows="4" required="" name="message" id="message-text" placeholder="Write message"></textarea>
+                <label for="message-text">Message</label>
+                <textarea class="form-control" rows="4" required name="message" id="message-text" placeholder="Write message..."></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="mt-4">
+                <button type="submit" class="btn btn-submit-rounded">Send Message</button>
+              </div>
             </form>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
-<p><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-  <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script> 
-  
-  <!-- Include all compiled plugins (below), or include individual files as needed --> 
-  
-  <script src="siteroot_portfolio/js/popper.min.js"></script> 
-  <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script> 
-</p>
+
+<!-- Scripts --> 
+<script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script> 
+<script src="siteroot_portfolio/js/popper.min.js"></script> 
+<script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script> 
 </body>
 </html>
