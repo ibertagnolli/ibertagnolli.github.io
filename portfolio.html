@@ -11,7 +11,7 @@
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="css/portfolio.css" rel="stylesheet">
 
-    <!--  Favicon --> 
+  <!-- Favicon --> 
   <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="images/favicon/favicon.ico" />
@@ -24,87 +24,122 @@
       color: #2c3e50;
     }
 
-    /* Featured Project Spotlight Card tehee */
-    .featured-card {
-      background-color: #2c3e50;
-      color: #ffffff;
+    /* Horizontal Project Card */
+    .horizontal-project-card {
+      background-color: #f7f5f0;
+      color: #2c3e50;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      margin-bottom: 50px;
-      border: 1px solid #3d4f63;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      margin-bottom: 36px;
+      border: 1px solid #e8e4dc;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .featured-badge {
+    .horizontal-project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-img-wrapper {
+      background-color: #e5ece9;
+      height: 100%;
+      min-height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .project-full-img {
+      width: 100%;
+      height: 100%;
+      min-height: 250px;
+      max-height: 280px;
+      object-fit: cover;
+    }
+
+    .project-content-side {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #2c3e50;
+      margin-bottom: 6px;
+    }
+
+    .project-badge {
       display: inline-block;
-      background-color: rgba(247, 245, 240, 0.15);
-      color: #f7f5f0;
-      font-size: 0.75rem;
+      background-color: #e2ded5;
+      color: #2c3e50;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 3px 8px;
       border-radius: 4px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      align-self: flex-start;
     }
 
-    /* Standard Project Card */
-    .project-card {
-      background-color: #2c3e50;
-      color: #ffffff;
-      border-radius: 8px;
-      overflow: hidden;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid #3d4f63;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
-    }
-
-    .project-card-img {
-      height: 200px;
-      width: 100%;
-      object-fit: cover;
-      background-color: #1a252f;
-    }
-
-    .project-card-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .project-card-title {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #f7f5f0;
-      margin-bottom: 8px;
-    }
-
-    .project-card-text {
-      color: #cbd5e0;
-      font-size: 0.93rem;
-      line-height: 1.5;
-      flex-grow: 1;
-      margin-bottom: 20px;
+    .project-description {
+      color: #4a5568;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 18px;
     }
 
     .tech-pill {
       display: inline-block;
-      background-color: rgba(247, 245, 240, 0.12);
-      color: #e2e8f0;
+      background-color: #ffffff;
+      color: #2c3e50;
       font-size: 0.78rem;
-      padding: 3px 8px;
+      font-weight: 500;
+      padding: 3px 10px;
       border-radius: 4px;
-      margin-right: 4px;
-      margin-bottom: 6px;
+      margin-right: 6px;
+      margin-bottom: 8px;
+      border: 1px solid #ddd7cc;
+    }
+
+    /* Buttons styled in dark slate theme */
+    .btn-project-primary {
+      background-color: #2c3e50;
+      color: #ffffff;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-project-primary:hover {
+      background-color: #1a252f;
+      color: #ffffff;
+      border-color: #1a252f;
+    }
+
+    .btn-project-outline {
+      background-color: transparent;
+      color: #2c3e50;
+      border: 1px solid #2c3e50;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-project-outline:hover {
+      background-color: #2c3e50;
+      color: #ffffff;
     }
   </style>
 </head>
@@ -141,143 +176,172 @@
 
   <div class="container">
 
-    <!-- ==================== FEATURED SPOTLIGHT: BABYSTEPS ==================== -->
-    <div class="featured-card">
+    <!-- 1. BabySteps -->
+    <div class="horizontal-project-card">
       <div class="row no-gutters align-items-center">
-        <div class="col-lg-6 d-flex justify-content-center align-items-center" style="background-color: #e5ece9; padding: 30px 15px; min-height: 320px;">
-          <img src="images/finalTracking.png" alt="BabySteps Tracking Screen" style="height: 250px; width: auto; object-fit: contain; margin-right: 12px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));">
-          <img src="images/finalHistory.png" alt="BabySteps History Screen" style="height: 250px; width: auto; object-fit: contain; margin-left: 12px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));">
+        <div class="col-lg-5 col-md-5">
+          <div class="project-img-wrapper" style="padding: 20px 10px;">
+            <img src="images/finalTracking.png" alt="BabySteps Tracking Screen" style="height: 220px; width: auto; object-fit: contain; margin-right: 8px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.1));">
+            <img src="images/finalHistory.png" alt="BabySteps History Screen" style="height: 220px; width: auto; object-fit: contain; margin-left: 8px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.1));">
+          </div>
         </div>
-        <div class="col-lg-6">
-          <div style="padding: 35px 30px;">
-            <span class="featured-badge">Featured Capstone Project</span>
-            <h2 style="font-weight: 700; color: #f7f5f0; margin-bottom: 12px;">BabySteps</h2>
-            <div style="margin-bottom: 14px;">
+        <div class="col-lg-7 col-md-7">
+          <div class="project-content-side">
+            <span class="project-badge">Featured Capstone</span>
+            <h2 class="project-title">BabySteps</h2>
+            <div style="margin-bottom: 12px;">
               <span class="tech-pill">Flutter</span>
               <span class="tech-pill">Dart</span>
               <span class="tech-pill">Firebase</span>
               <span class="tech-pill">Cross-Platform</span>
             </div>
-            <p style="color: #cbd5e0; font-size: 0.98rem; line-height: 1.6; margin-bottom: 24px;">
+            <p class="project-description">
               A comprehensive newborn caretaking mobile app designed for parents and pediatric caregivers. Enables real-time logging of feedings, sleep timers, health metrics, and CDC developmental milestone tracking through a child's first year.
             </p>
             <div>
-              <a href="https://bellabertagnolli.com/nextjs-babysteps_website/" class="btn btn-light btn-sm font-weight-bold mr-2" target="_blank">View Website</a>
-              <a href="https://www.youtube.com/watch?v=7EPHTb2CE7U&t=1s" class="btn btn-outline-light btn-sm" target="_blank">Watch Promo Video</a>
-              <a href="https://github.com/ibertagnolli/BabySteps" class="btn btn-outline-light btn-sm" target="_blank">Code</a>
+              <a href="https://bellabertagnolli.com/nextjs-babysteps_website/" class="btn btn-project-primary mr-2" target="_blank">View Website</a>
+              <a href="https://www.youtube.com/watch?v=7EPHTb2CE7U&t=1s" class="btn btn-project-outline mr-2" target="_blank">Watch Promo Video</a>
+              <a href="https://github.com/ibertagnolli/BabySteps" class="btn btn-project-outline" target="_blank">Code</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ==================== 5-PROJECT GRID ==================== -->
-    <div class="row">
-
-      <!-- VanGan -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <img class="project-card-img" src="images/IMG_5051.PNG" alt="VanGan Art Preview">
-          <div class="project-card-body">
-            <h3 class="project-card-title">VanGan</h3>
-            <div style="margin-bottom: 10px;">
+    <!-- 2. VanGan -->
+    <div class="horizontal-project-card">
+      <div class="row no-gutters align-items-center">
+        <div class="col-lg-5 col-md-5">
+          <div class="project-img-wrapper">
+            <img class="project-full-img" src="images/IMG_5051.PNG" alt="VanGan Art Preview">
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7">
+          <div class="project-content-side">
+            <span class="project-badge">Science Fair 1st Place</span>
+            <h2 class="project-title">VanGan</h2>
+            <div style="margin-bottom: 12px;">
               <span class="tech-pill">PyTorch</span>
               <span class="tech-pill">Python</span>
               <span class="tech-pill">GANs</span>
             </div>
-            <p class="project-card-text">
-              A Generative Adversarial Network trained on impressionist landscapes and Van Gogh paintings. Awarded 1st place in Computer & Electrical Engineering at the 2020 University of Utah Science Fair and received the Director's Award.
+            <p class="project-description">
+              A Generative Adversarial Network trained on impressionist landscapes and Van Gogh paintings. Won 1st place in Computer & Electrical Engineering at the 2020 University of Utah Science Fair and received the Director's Award.
             </p>
             <div>
-              <a href="https://github.com/ibertagnolli/vangan" class="btn btn-light btn-sm" target="_blank">View Code</a>
+              <a href="https://github.com/ibertagnolli/vangan" class="btn btn-project-primary" target="_blank">View Code</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- TA Application Website -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <img class="project-card-img" src="images/tawebsite.png" alt="TA Application Portal">
-          <div class="project-card-body">
-            <h3 class="project-card-title">TA Application Website</h3>
-            <div style="margin-bottom: 10px;">
+    <!-- 3. TA Application Website -->
+    <div class="horizontal-project-card">
+      <div class="row no-gutters align-items-center">
+        <div class="col-lg-5 col-md-5">
+          <div class="project-img-wrapper">
+            <img class="project-full-img" src="images/tawebsite.png" alt="TA Application Portal">
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7">
+          <div class="project-content-side">
+            <h2 class="project-title">TA Application Website</h2>
+            <div style="margin-bottom: 12px;">
               <span class="tech-pill">C#</span>
               <span class="tech-pill">.NET Core</span>
               <span class="tech-pill">SQL</span>
             </div>
-            <p class="project-card-text">
-              Revamped the University of Utah's teaching assistant portal. Built secure authentication, database schemas for applicant tracking, and administration management dashboards.
+            <p class="project-description">
+              Rewrote and revamped the University of Utah's teaching assistant portal. Built secure authentication, database schemas for applicant tracking, and administration management dashboards.
             </p>
             <div>
-              <a href="/videos.html" class="btn btn-light btn-sm">View Video</a>
+              <a href="/videos.html" class="btn btn-project-primary">View Video</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Portfolio Website -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <img class="project-card-img" src="images/aboutimg.png" alt="Portfolio Website Preview">
-          <div class="project-card-body">
-            <h3 class="project-card-title">Personal Portfolio</h3>
-            <div style="margin-bottom: 10px;">
+    <!-- 4. Personal Portfolio Website -->
+    <div class="horizontal-project-card">
+      <div class="row no-gutters align-items-center">
+        <div class="col-lg-5 col-md-5">
+          <div class="project-img-wrapper">
+            <img class="project-full-img" src="images/aboutimg.png" alt="Portfolio Website Preview">
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7">
+          <div class="project-content-side">
+            <h2 class="project-title">Personal Portfolio Website</h2>
+            <div style="margin-bottom: 12px;">
               <span class="tech-pill">HTML5</span>
               <span class="tech-pill">CSS3</span>
               <span class="tech-pill">Bootstrap</span>
               <span class="tech-pill">CI/CD</span>
             </div>
-            <p class="project-card-text">
-              Custom responsive personal portfolio and art gallery built with responsive design patterns, GitHub Actions automated deployment pipelines, and custom domain routing.
+            <p class="project-description">
+              Custom responsive personal portfolio and art gallery built with clean layout patterns, automated deployment pipelines via GitHub Actions, and custom domain configuration.
             </p>
             <div>
-              <a href="https://github.com/ibertagnolli/ibertagnolli.github.io" class="btn btn-light btn-sm" target="_blank">View Code</a>
+              <a href="https://github.com/ibertagnolli/ibertagnolli.github.io" class="btn btn-project-primary" target="_blank">View Code</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Recycling Game -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <img class="project-card-img" src="images/recyclemainscreen.png" alt="Recycling Game Screen">
-          <div class="project-card-body">
-            <h3 class="project-card-title">Recycling Game</h3>
-            <div style="margin-bottom: 10px;">
+    <!-- 5. Recycling Game -->
+    <div class="horizontal-project-card">
+      <div class="row no-gutters align-items-center">
+        <div class="col-lg-5 col-md-5">
+          <div class="project-img-wrapper">
+            <img class="project-full-img" src="images/recyclemainscreen.png" alt="Recycling Game Screen">
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7">
+          <div class="project-content-side">
+            <h2 class="project-title">Recycling Educational Game</h2>
+            <div style="margin-bottom: 12px;">
               <span class="tech-pill">C++</span>
               <span class="tech-pill">Game Dev</span>
               <span class="tech-pill">Education</span>
             </div>
-            <p class="project-card-text">
-              An interactive 2D educational game created in C++ that teaches Salt Lake City children practical recycling sorting rules through puzzle mechanics.
+            <p class="project-description">
+              An interactive 2D educational game built with C++ designed to teach Salt Lake City school children practical waste sorting guidelines and environmental habits through puzzle mechanics.
             </p>
             <div>
-              <a href="https://github.com/ibertagnolli/Recycling-Educational-Game" class="btn btn-light btn-sm" target="_blank">View Code</a>
+              <a href="https://github.com/ibertagnolli/Recycling-Educational-Game" class="btn btn-project-primary" target="_blank">View Code</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Health & Hiking Tracker -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="project-card">
-          <img class="project-card-img" src="images/Screen Shot 2023-02-24 at 10.18.11 AM.png" alt="Health App Preview">
-          <div class="project-card-body">
-            <h3 class="project-card-title">Health & Hiking Tracker</h3>
-            <div style="margin-bottom: 10px;">
+    <!-- 6. Health & Hiking Tracker -->
+    <div class="horizontal-project-card">
+      <div class="row no-gutters align-items-center">
+        <div class="col-lg-5 col-md-5">
+          <div class="project-img-wrapper">
+            <img class="project-full-img" src="images/Screen Shot 2023-02-24 at 10.18.11 AM.png" alt="Health App Preview">
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7">
+          <div class="project-content-side">
+            <h2 class="project-title">Health & Hiking App</h2>
+            <div style="margin-bottom: 12px;">
               <span class="tech-pill">Kotlin</span>
               <span class="tech-pill">Android Studio</span>
-              <span class="tech-pill">APIs</span>
+              <span class="tech-pill">REST APIs</span>
             </div>
-            <p class="project-card-text">
-              A mobile outdoor tracking application developed in Kotlin featuring trail maps, real-time local weather forecasts, and workout logging.
+            <p class="project-description">
+              A fitness and outdoor tracking mobile application built in Kotlin (Android Studio) to help users log daily nutrition, retrieve real-time weather conditions, and plan hiking itineraries.
             </p>
           </div>
         </div>
       </div>
-
     </div>
+
   </div>
 
   <!-- Footer -->
