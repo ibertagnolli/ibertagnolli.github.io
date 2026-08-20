@@ -11,75 +11,15 @@
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="css/portfolio.css" rel="stylesheet">
 
-  <!-- Favicon --> 
+    <!--  Favicon --> 
   <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="images/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="images/favicon/site.webmanifest" />
-
-  <style>
-    body {
-      background-color: #ffffff;
-      color: #2c3e50;
-    }
-
-    .hero-container {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      background-color: #1a252f;
-      background-image: linear-gradient(to right, #1a252f 40%, rgba(26, 37, 47, 0.85) 65%, rgba(26, 37, 47, 0.4) 100%), url('images/IMG_0970-Edit.jpg');
-      background-size: cover;
-      background-position: center right;
-      padding: 120px 0 60px 0;
-    }
-
-    .hero-subtitle-tag {
-      color: #94a3b8;
-      letter-spacing: 0.12em;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .hero-title {
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      color: #f8fafc;
-    }
-
-    .hero-tagline {
-      font-size: 1.3rem;
-      color: #e2e8f0;
-      font-weight: 400;
-      margin-bottom: 24px;
-    }
-
-    .hero-desc {
-      color: #cbd5e1;
-      font-size: 1rem;
-      max-width: 520px;
-      line-height: 1.6;
-      margin-bottom: 32px;
-    }
-
-    .hero-btn {
-      font-weight: 600;
-      padding: 9px 20px;
-      border-radius: 6px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      transition: all 0.2s ease-in-out;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top"
     style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
     <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Isabella Bertagnolli</a>
@@ -98,58 +38,101 @@
       </ul>
     </div>
   </nav>
-
-  <!-- Split Hero Section -->
-  <div class="hero-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 text-white">
-          <div class="hero-subtitle-tag">Software Engineer &middot; Visual Artist</div>
-          <h1 class="hero-title">Isabella<br>Bertagnolli</h1>
-          
-          <div class="hero-tagline">
-            I'm passionate about <span class="auto-input" style="color: #ffffff; font-weight: 600;"></span>
-          </div>
-
-          <p class="hero-desc">
-            Software Engineer II at HashiCorp (an IBM Company) building AI/ML risk predictor models and delivery infrastructure.
-          </p>
-
-          <div class="d-flex flex-wrap">
-            <a class="btn btn-light hero-btn" href="Resume.html">Read Résumé</a>
-            <a class="btn btn-outline-light hero-btn" href="about.html">About Me</a>
-            <a class="btn btn-outline-light hero-btn" href="portfolio.html">Projects</a>
-            <a class="btn btn-outline-light hero-btn" href="https://github.com/ibertagnolli" target="_blank">GitHub</a>
-            <a class="btn btn-outline-light hero-btn" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" target="_blank">LinkedIn</a>
-          </div>
+  <!-- Jumbotron -->
+  <!---<div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+	padding-top: 30px;
+    height: 400px;
+  "> --->
+  <div class="jumbotron jumbotron-fluid justify-content-center align-items-center">
+    <!--
+<div class=" p-5 text-center bg-image rounded-3" >
+	<img class="bg-image" src="images/ezgif.com-resize.jpg" alt="hands on keyboard">
+-->
+    <!--<div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">-->
+    <div class="d-flex justify-content-center align-items-center text-center h-50">
+      <div class="text-white" style="padding-top: 180px; filter: brightness(1.0);"> <br>
+        <br>
+        <h1 style="align-content:left ">Hi, I'm </h1>
+        <div class="text-box">
+          <h1> Isabella Bertagnolli</h1>
+          <h3>I'm passionate about <span class="auto-input"></span></h3>
         </div>
+        <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+        <script>
+          var typed = new Typed(".auto-input", {
+            strings: ["Design", "Software Development", "Machine Learning", "Algorithms", "Dev ops", "Release Tooling", "Data Engineering", "Systems Design"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+          })
+        </script>
+        <p>
+          <a class="btn btn-outline-light btn-sm" href="Resume.html" role="button">Check out my resume here</a> <a
+            class="btn btn-outline-light btn-sm" href="about.html" role="button">Learn more about me here</a>
+        </p>
+        <p>
+          <a class="btn btn-outline-light btn-sm" href="https://github.com/ibertagnolli" role="button" target="_blank">
+            Github</a>
+          <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/"
+            role="button" target="_blank"> LinkedIn</a>
+        </p>
       </div>
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="container-fluid text-center" style="padding-top: 30px; padding-bottom: 30px;">
-    <hr>
-    <div class="row">
-      <div class="text-center col-lg-6 offset-lg-3">
-        <p style="color:black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#">bella bertagnolli</a>[cite: 7]</p>
+  <!--</div>-->
+  <!-- Jumbotron -->
+  <!-- <div class="container">
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/Profile Pictures black background.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Women In Computing</h5>
+          <p class="card-text">I have been an officer for the women in computing club for 2 years. This year I am the clubs treasurer.</p>
+          <a href="leadership.html" class="btn btn-light">About</a> </div>
       </div>
     </div>
-  </footer>
+    <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_2952.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Mountain Biking</h5>
+          <p class="card-text">Outside of school I love to get outdoors and explore. I've been mountain biking for over 8 years now. </p>
+          <a href="https://www.utahmtb.org/" class="btn btn-light">About</a> </div>
+      </div>
+    </div>
+    <br>
+    <br/>
+    <div class="col-md-4">
+      <div class="card bg-dark"> <img class="card-img-top" src="images/DSC_0150.JPG" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Art</h5>
+          <p class="card-text">I have been painting and drawing for over 10 years. If you want to check out some of my work click below.</p>
+          <a href="portfolio.html" class="btn btn-light">About</a> </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+</div> -->
+  <br>
+  <hr>
+  <div class="row">
+    <div class="text-center col-lg-6 offset-lg-3 ">
+      <p style="color: black;">Copyright &copy; 2021 &middot; All Rights Reserved &middot; <a href="#">My Website</a>
+      </p>
+    </div>
+  </div>
+  <p><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
 
-  <!-- Scripts -->
-  <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
-  <script src="siteroot_portfolio/js/popper.min.js"></script>
-  <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
-  <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed(".auto-input", {
-      strings: ["Machine Learning", "Software Development", "DevOps & CI/CD", "Systems Design", "Visual Art", "Data Pipelines"],
-      typeSpeed: 90,
-      backSpeed: 60,
-      loop: true
-    });
-  </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="siteroot_portfolio/js/popper.min.js"></script>
+    <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
+  </p>
+  <p>&nbsp; </p>
 </body>
 
 </html>

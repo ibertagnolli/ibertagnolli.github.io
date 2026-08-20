@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
     <style>
-        /* Custom styles for a clean art gallery grid */
         .art-card {
             border: none;
             background: transparent;
@@ -31,18 +30,21 @@
         .art-img-container {
             width: 100%;
             height: 260px;
-            /* Proportional fixed height for 4-column layout */
             overflow: hidden;
             border-radius: 4px;
             background-color: #f7f5f0;
+            cursor: pointer;
         }
 
         .art-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Ensures images fill the box without stretching */
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        .art-card:hover .art-img-container img {
+            transform: scale(1.03);
         }
 
         .art-caption {
@@ -61,6 +63,50 @@
             font-size: 0.85rem;
             color: #718096;
             margin-bottom: 0;
+        }
+
+        /* Lightbox Modal Customization */
+        .modal-content.lightbox-content {
+            background-color: transparent;
+            border: none;
+        }
+
+        .modal-body.lightbox-body {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-img {
+            max-height: 85vh;
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-caption {
+            color: #ffffff;
+            margin-top: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: -35px;
+            right: 0;
+            color: #ffffff;
+            font-size: 2rem;
+            opacity: 0.85;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .close-lightbox:hover {
+            opacity: 1;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -86,8 +132,9 @@
         </div>
     </nav>
 
+    <!-- Header Jumbotron with Recline Artwork -->
     <div class="p-5 text-center bg-image rounded-3" style="
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('images/art/King\ Arthur.jpg'); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('images/art/recline.jpg'); 
     background-size: cover;
     background-position: center;
     padding-top: 30px;
@@ -104,20 +151,13 @@
         </div>
     </div>
 
-    <div class="container-fluid" style="max-width: 1400px; margin-top: 40px; margin-bottom: 40px;">
-        <div class="text-center">
-            <h1 style="color: #2c3e50; font-weight: 700;">Art Gallery</h1>
-            <p class="lead" style="color: #718096;">Paintings, drawings, apparel, and visual works</p>
-        </div>
-        <hr style="margin-top: 30px; margin-bottom: 40px;">
-    </div>
-
-    <div class="container-fluid" style="max-width: 1400px;">
+    <!-- Gallery Grid -->
+    <div class="container-fluid" style="max-width: 1400px; margin-top: 50px;">
         <div class="row">
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Lady of the Lake.jpg" data-title="Lady of the Lake">
                         <img src="/images/art/Lady of the Lake.jpg" alt="Lady of the Lake">
                     </div>
                     <div class="art-caption">
@@ -128,7 +168,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/King Arthur.jpg" data-title="King Arthur">
                         <img src="/images/art/King Arthur.jpg" alt="King Arthur">
                     </div>
                     <div class="art-caption">
@@ -139,7 +179,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Holy Grail.jpg" data-title="Holy Grail">
                         <img src="/images/art/Holy Grail.jpg" alt="Holy Grail">
                     </div>
                     <div class="art-caption">
@@ -150,7 +190,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Excalibur.jpg" data-title="Excalibur">
                         <img src="/images/art/Excalibur.jpg" alt="Excalibur">
                     </div>
                     <div class="art-caption">
@@ -161,7 +201,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Nimue.jpg" data-title="Nimue">
                         <img src="/images/art/Nimue.jpg" alt="Nimue">
                     </div>
                     <div class="art-caption">
@@ -172,7 +212,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/bluesiren.jpg" data-title="Blue Siren">
                         <img src="/images/art/bluesiren.jpg" alt="Blue Siren">
                     </div>
                     <div class="art-caption">
@@ -183,7 +223,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/DSC_0150.JPG" data-title="Black Lagoon" data-medium="Acrylic on Canvas">
                         <img src="images/DSC_0150.JPG" alt="Black Lagoon">
                     </div>
                     <div class="art-caption">
@@ -195,7 +235,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Hades.png" data-title="Hades">
                         <img src="/images/art/Hades.png" alt="Hades">
                     </div>
                     <div class="art-caption">
@@ -206,7 +246,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/IMG_1921.JPG" data-title="Persephone" data-medium="Acrylic on Canvas">
                         <img src="images/IMG_1921.JPG" alt="Persephone">
                     </div>
                     <div class="art-caption">
@@ -218,7 +258,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/cigarette.jpg" data-title="Cigarette">
                         <img src="/images/cigarette.jpg" alt="Cigarette">
                     </div>
                     <div class="art-caption">
@@ -227,9 +267,9 @@
                 </div>
             </div>
 
-             <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/IMG_6664.jpeg" data-title="Portrait of Alex 2" data-medium="Oil & Acrylic on Canvas">
                         <img src="images/IMG_6664.jpeg" alt="Portrait of Alex 2">
                     </div>
                     <div class="art-caption">
@@ -241,7 +281,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Martini_UFO.png" data-title="UFO Martini">
                         <img src="/images/art/Martini_UFO.png" alt="UFO Martini">
                     </div>
                     <div class="art-caption">
@@ -252,7 +292,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Highball_UFO.png" data-title="UFO Highball">
                         <img src="/images/art/Highball_UFO.png" alt="UFO Highball">
                     </div>
                     <div class="art-caption">
@@ -263,7 +303,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Baba_Yaga_Coffee.png" data-title="Baba Yaga Coffee">
                         <img src="/images/art/Baba_Yaga_Coffee.png" alt="Baba Yaga Coffee">
                     </div>
                     <div class="art-caption">
@@ -274,7 +314,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Eeel_On_Tap.png" data-title="Eel On Tap">
                         <img src="/images/art/Eeel_On_Tap.png" alt="Eel On Tap">
                     </div>
                     <div class="art-caption">
@@ -285,7 +325,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Death_Decanter.png" data-title="Death Decanter">
                         <img src="/images/art/Death_Decanter.png" alt="Death Decanter">
                     </div>
                     <div class="art-caption">
@@ -296,7 +336,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/UFO_COW.JPG" data-title="UFO Cow">
                         <img src="/images/art/UFO_COW.JPG" alt="UFO Cow">
                     </div>
                     <div class="art-caption">
@@ -307,7 +347,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/void.JPG" data-title="Void">
                         <img src="/images/art/void.JPG" alt="Void">
                     </div>
                     <div class="art-caption">
@@ -318,7 +358,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/HornsFront.JPG" data-title="Horns (Front)">
                         <img src="/images/art/HornsFront.JPG" alt="Horns (Front)">
                     </div>
                     <div class="art-caption">
@@ -329,7 +369,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/HornsBack.JPG" data-title="Horns (Back)">
                         <img src="/images/art/HornsBack.JPG" alt="Horns (Back)">
                     </div>
                     <div class="art-caption">
@@ -340,7 +380,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/undergrowth_up_front.jpg" data-title="Undergrowth (Front)">
                         <img src="/images/art/undergrowth_up_front.jpg" alt="Undergrowth (Front)">
                     </div>
                     <div class="art-caption">
@@ -351,7 +391,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/undergrowth_down_back.jpg" data-title="Undergrowth (Back)">
                         <img src="/images/art/undergrowth_down_back.jpg" alt="Undergrowth (Back)">
                     </div>
                     <div class="art-caption">
@@ -362,7 +402,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Under_the_surface_front.jpg" data-title="Under the Surface (Front)">
                         <img src="/images/art/Under_the_surface_front.jpg" alt="Under the Surface (Front)">
                     </div>
                     <div class="art-caption">
@@ -373,7 +413,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/under_the_surface_back.jpg" data-title="Under the Surface (Back)">
                         <img src="/images/art/under_the_surface_back.jpg" alt="Under the Surface (Back)">
                     </div>
                     <div class="art-caption">
@@ -384,7 +424,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/caged_butterfly.JPG" data-title="Caged Butterfly">
                         <img src="/images/art/caged_butterfly.JPG" alt="Caged Butterfly">
                     </div>
                     <div class="art-caption">
@@ -395,7 +435,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/art/Ray_Chalk.HEIC" data-title="Rei Chalk art" data-medium="Chalk on Cement">
                         <img src="images/art/Ray_Chalk.HEIC" alt="Rei">
                     </div>
                     <div class="art-caption">
@@ -407,7 +447,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="art-card">
-                    <div class="art-img-container">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/art/Link_Chalk.JPG" data-title="Link Chalk art" data-medium="Chalk on Cement">
                         <img src="images/art/Link_Chalk.JPG" alt="Link">
                     </div>
                     <div class="art-caption">
@@ -417,6 +457,21 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content lightbox-content">
+                <div class="modal-body lightbox-body text-center position-relative">
+                    <button type="button" class="close-lightbox" data-dismiss="modal" aria-label="Close">&times;</button>
+                    <div class="w-100">
+                        <img src="" alt="Full View" class="lightbox-img" id="modalImage">
+                        <div class="lightbox-caption" id="modalCaption"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -432,6 +487,23 @@
     <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
     <script src="siteroot_portfolio/js/popper.min.js"></script>
     <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.art-img-container').on('click', function () {
+                var imgSrc = $(this).attr('data-img');
+                var title = $(this).attr('data-title');
+                var medium = $(this).attr('data-medium');
+
+                $('#modalImage').attr('src', imgSrc);
+                var captionText = title;
+                if (medium) {
+                    captionText += ' — ' + medium;
+                }
+                $('#modalCaption').text(captionText);
+            });
+        });
+    </script>
 </body>
 
 </html>
