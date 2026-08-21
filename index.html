@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bella Bertagnolli</title>
 
-  <!-- Google Fonts Fallbacks -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -24,16 +24,6 @@
   <link rel="manifest" href="images/favicon/site.webmanifest" />
 
   <style>
-    @font-face {
-      font-family: 'TAN-Nimbus';
-      src: url('fonts/TAN-Nimbus.woff2') format('woff2'),
-           url('fonts/TAN-Nimbus.ttf') format('truetype'),
-           url('fonts/TAN-Nimbus.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #ffffff;
@@ -54,28 +44,28 @@
       padding-top: 80px;
     }
 
-    /* 3D Offset Retro Text Styling */
-    .retro-nimbus-title {
-      font-family: 'TAN-Nimbus', 'Syne', sans-serif;
-      color: #2c3e50;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-      /* Sharp Tan drop-layer offset with crisp drop shadow */
+    /* Resume-style bold uppercase lettering with solid light-blue offset shadow */
+    .resume-styled-title {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #213547;
       text-shadow: 
-        3px 3px 0 #f7f5f0,
-        4px 4px 0 #e2ded5,
-        5px 5px 0 #e2ded5,
-        7px 7px 14px rgba(0, 0, 0, 0.6);
+        3px 3px 0 #a9d6ce,
+        4px 4px 0 #a9d6ce,
+        5px 5px 12px rgba(0, 0, 0, 0.55);
+      line-height: 1.1;
     }
 
     .hero-pretitle {
-      font-size: 2.3rem;
-      margin-bottom: 6px;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
     }
 
     .hero-name-title {
-      font-size: 4.2rem;
-      margin-bottom: 18px;
+      font-size: 4rem;
+      margin-bottom: 22px;
     }
 
     .hero-tagline {
@@ -91,24 +81,24 @@
       font-weight: 700;
     }
 
+    /* Clean solid outline buttons matching resume theme */
     .btn-hero-unified {
-      background-color: rgba(247, 245, 240, 0.15);
-      color: #ffffff;
-      border: 1.5px solid rgba(247, 245, 240, 0.85);
-      font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #213547;
+      border: 1.5px solid #213547;
+      font-weight: 700;
       font-size: 0.92rem;
-      border-radius: 6px;
-      padding: 8px 18px;
+      border-radius: 4px;
+      padding: 7px 18px;
       margin: 4px;
-      backdrop-filter: blur(4px);
       transition: all 0.2s ease-in-out;
       text-shadow: none;
     }
 
     .btn-hero-unified:hover {
-      background-color: #f7f5f0;
-      border-color: #f7f5f0;
-      color: #2c3e50;
+      background-color: #213547;
+      border-color: #213547;
+      color: #ffffff;
     }
   </style>
 </head>
@@ -137,10 +127,10 @@
   <!-- Jumbotron Hero -->
   <div class="jumbotron jumbotron-fluid jumbotron-hero">
     <div class="d-flex justify-content-center align-items-center text-center">
-      <div style="padding: 20px; max-width: 820px;">
+      <div style="padding: 20px; max-width: 860px;">
         
-        <h1 class="retro-nimbus-title hero-pretitle">Hi, I'm</h1>
-        <h1 class="retro-nimbus-title hero-name-title">Bella Bertagnolli</h1>
+        <h1 class="resume-styled-title hero-pretitle">Hi, I'm</h1>
+        <h1 class="resume-styled-title hero-name-title">Bella Bertagnolli</h1>
         
         <h3 class="hero-tagline">
           I'm passionate about <span class="auto-input typed-text-accent"></span>
@@ -174,7 +164,7 @@
     <hr>
     <div class="row">
       <div class="text-center col-lg-6 offset-lg-3">
-        <p style="color: black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#" style="color: #2c3e50;">bella bertagnolli</a>[cite: 7]</p>
+        <p style="color: black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#" style="color: #2c3e50;">bella bertagnolli</a></p>
       </div>
     </div>
   </footer>
