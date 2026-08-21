@@ -7,6 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bella Bertagnolli</title>
 
+  <!-- Google Fonts: Inter & Plus Jakarta Sans for clean, modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="css/portfolio.css" rel="stylesheet">
@@ -19,12 +24,18 @@
   <link rel="manifest" href="images/favicon/site.webmanifest" />
 
   <style>
-    /* Jumbotron with slight dark tint overlay over the computer image */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #ffffff;
+      color: #2c3e50;
+    }
+
+    /* Jumbotron Hero with darker ambient overlay */
     .jumbotron-hero {
       min-height: 100vh;
       margin-bottom: 0;
       background-color: #1a252f;
-      background-image: linear-gradient(rgba(17, 24, 39, 0.55), rgba(17, 24, 39, 0.55)), url('images/computer_img.jpg');
+      background-image: linear-gradient(rgba(18, 25, 33, 0.72), rgba(18, 25, 33, 0.72)), url('images/computer_img.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -34,30 +45,76 @@
       padding-top: 80px;
     }
 
-    /* Dark blue fill with light blue / cyan glowing highlight text-shadow */
-    .hero-heading-styled {
-      color: #2c3e50 !important;
-      font-weight: 800;
-      text-shadow: 
-        0 0 10px #7ee8fa, 
-        0 0 20px #80d0c7, 
-        0 0 35px rgba(126, 232, 250, 0.8),
-        -1px -1px 0 #7ee8fa,  
-         1px -1px 0 #7ee8fa,
-        -1px  1px 0 #7ee8fa,
-         1px  1px 0 #7ee8fa;
-      letter-spacing: 0.03em;
+    /* Subdued Tan Accent Tag */
+    .hero-pretitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #dfd8cb;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
     }
 
-    .hero-name-styled {
+    /* Clean, crisp Blue & Tan Typography */
+    .hero-name-title {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
       font-size: 3.8rem;
-      margin-top: 4px;
-      margin-bottom: 12px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      color: #f5f2eb; /* Warm Tan/Cream fill */
+      /* Subtle slate depth + soft warm glow instead of harsh cyan blur */
+      text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(123, 163, 196, 0.35);
+      margin-bottom: 16px;
     }
 
-    .hero-sub-styled {
-      font-size: 2rem;
-      margin-bottom: 0;
+    .hero-tagline {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #dfd8cb;
+      margin-bottom: 28px;
+    }
+
+    .typed-text-accent {
+      color: #8bb3d6; /* Clean Soft Blue */
+      font-weight: 600;
+    }
+
+    /* Buttons styled in Tan & Blue palette */
+    .btn-hero-primary {
+      background-color: #8bb3d6;
+      color: #16222f;
+      border: 1px solid #8bb3d6;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 8px 18px;
+      margin: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-hero-primary:hover {
+      background-color: #729ec4;
+      border-color: #729ec4;
+      color: #ffffff;
+    }
+
+    .btn-hero-outline {
+      background-color: rgba(223, 216, 203, 0.08);
+      color: #f5f2eb;
+      border: 1px solid rgba(223, 216, 203, 0.45);
+      font-weight: 500;
+      border-radius: 6px;
+      padding: 8px 18px;
+      margin: 4px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-hero-outline:hover {
+      background-color: #dfd8cb;
+      border-color: #dfd8cb;
+      color: #1a252f;
     }
   </style>
 </head>
@@ -86,46 +143,47 @@
   <!-- Jumbotron Hero -->
   <div class="jumbotron jumbotron-fluid jumbotron-hero">
     <div class="d-flex justify-content-center align-items-center text-center">
-      <div class="text-white" style="padding: 20px;">
-        <h1 class="hero-heading-styled hero-sub-styled">Hi, I'm</h1>
-        <div class="text-box">
-          <h1 class="hero-heading-styled hero-name-styled">Bella Bertagnolli</h1>
-          <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.8); font-weight: 500; font-size: 1.4rem; margin-bottom: 24px;">
-            I'm passionate about <span class="auto-input" style="color: #7ee8fa; font-weight: 600;"></span>
-          </h3>
-        </div>
+      <div style="padding: 20px; max-width: 780px;">
+        
+        <p class="hero-pretitle">Hi, I'm</p>
+        <h1 class="hero-name-title">Bella Bertagnolli</h1>
+        
+        <h3 class="hero-tagline">
+          I'm passionate about <span class="auto-input typed-text-accent"></span>
+        </h3>
 
         <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
         <script>
           var typed = new Typed(".auto-input", {
             strings: ["Design", "Software Development", "Machine Learning", "Algorithms", "DevOps", "Release Tooling", "Data Engineering", "Systems Design"],
-            typeSpeed: 100,
-            backSpeed: 100,
+            typeSpeed: 90,
+            backSpeed: 55,
             loop: true
           })
         </script>
 
-        <p class="mt-4">
-          <a class="btn btn-outline-light btn-sm mr-2" href="Resume.html" role="button" style="padding: 7px 16px; font-weight: 600;">Check out my resume here</a>
-          <a class="btn btn-outline-light btn-sm" href="about.html" role="button" style="padding: 7px 16px; font-weight: 600;">Learn more about me here</a>
-        </p>
-        <p class="mt-2">
-          <a class="btn btn-outline-light btn-sm mr-2" href="https://github.com/ibertagnolli" role="button" target="_blank" style="padding: 7px 16px; font-weight: 600;">GitHub</a>
-          <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" role="button" target="_blank" style="padding: 7px 16px; font-weight: 600;">LinkedIn</a>
-        </p>
+        <div class="mt-4">
+          <a class="btn btn-hero-primary" href="Resume.html" role="button">Check out my resume here</a>
+          <a class="btn btn-hero-outline" href="about.html" role="button">Learn more about me here</a>
+        </div>
+        <div class="mt-2">
+          <a class="btn btn-hero-outline" href="https://github.com/ibertagnolli" role="button" target="_blank">GitHub</a>
+          <a class="btn btn-hero-outline" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" role="button" target="_blank">LinkedIn</a>
+        </div>
+
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <div class="container-fluid text-center" style="padding-top: 35px; padding-bottom: 35px;">
+  <footer class="container-fluid text-center" style="padding-top: 35px; padding-bottom: 35px;">
     <hr>
     <div class="row">
       <div class="text-center col-lg-6 offset-lg-3">
         <p style="color: black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#" style="color: #2c3e50;">bella bertagnolli</a></p>
       </div>
     </div>
-  </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
