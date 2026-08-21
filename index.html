@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bella Bertagnolli</title>
 
-  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Syne:wght@800&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -24,7 +24,6 @@
   <link rel="manifest" href="images/favicon/site.webmanifest" />
 
   <style>
-    /* Option A: If you export TAN-Nimbus.woff2/ttf from your files, drop it in fonts/ */
     @font-face {
       font-family: 'TAN-Nimbus';
       src: url('fonts/TAN-Nimbus.woff2') format('woff2'),
@@ -40,12 +39,11 @@
       color: #2c3e50;
     }
 
-    /* Lighter background filter over laptop image */
     .jumbotron-hero {
       min-height: 100vh;
       margin-bottom: 0;
       background-color: #1a252f;
-      background-image: linear-gradient(rgba(17, 24, 39, 0.40), rgba(17, 24, 39, 0.40)), url('images/computer_img.jpg');
+      background-image: linear-gradient(rgba(17, 24, 39, 0.10), rgba(17, 24, 39, 0.10)), url('images/computer_img.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -55,45 +53,52 @@
       padding-top: 80px;
     }
 
-    .hero-pretitle {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: #f7f5f0;
-      letter-spacing: 0.04em;
-      margin-bottom: 4px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    /* Shared Dark Blue fill with Tan glow */
+    .tan-glow-text {
+      color: #2c3e50 !important;
+      font-weight: 800;
+      text-shadow: 
+        0 0 10px #f7f5f0,
+        0 0 20px #e2ded5,
+        0 0 35px rgba(247, 245, 240, 0.85),
+        -1px -1px 0 #e2ded5,  
+         1px -1px 0 #e2ded5,
+        -1px  1px 0 #e2ded5,
+         1px  1px 0 #e2ded5;
+      letter-spacing: -0.01em;
     }
 
+    /* Scaled up "Hi, I'm" */
+    .hero-pretitle {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    /* Name Heading */
     .hero-name-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 3.8rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
       line-height: 1.1;
-      color: #ffffff;
-      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
       margin-bottom: 16px;
     }
 
-    /* Stylized capital 'B's matching the TAN Nimbus silhouette */
+    /* Favicon-styled B's */
     .brand-b {
       font-family: 'TAN-Nimbus', 'Syne', sans-serif;
       font-weight: 800;
       font-size: 1.18em;
       display: inline-block;
       letter-spacing: -0.04em;
-      color: #ffffff;
     }
 
     .hero-tagline {
-      font-size: 1.3rem;
-      font-weight: 500;
+      font-size: 1.35rem;
+      font-weight: 600;
       color: #ffffff;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
       margin-bottom: 28px;
     }
 
-    /* Typed text matching font color */
     .typed-text-accent {
       color: #ffffff;
       font-weight: 700;
@@ -101,9 +106,9 @@
 
     /* Unified semi-translucent glass outline buttons */
     .btn-hero-unified {
-      background-color: rgba(247, 245, 240, 0.12);
+      background-color: rgba(247, 245, 240, 0.15);
       color: #ffffff;
-      border: 1.5px solid rgba(255, 255, 255, 0.75);
+      border: 1.5px solid rgba(247, 245, 240, 0.85);
       font-weight: 600;
       font-size: 0.92rem;
       border-radius: 6px;
@@ -115,15 +120,14 @@
     }
 
     .btn-hero-unified:hover {
-      background-color: #ffffff;
-      border-color: #ffffff;
-      color: #1a252f;
+      background-color: #f7f5f0;
+      border-color: #f7f5f0;
+      color: #2c3e50;
     }
   </style>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top"
     style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
     <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Bella Bertagnolli</a>
@@ -143,13 +147,12 @@
     </div>
   </nav>
 
-  <!-- Jumbotron Hero -->
   <div class="jumbotron jumbotron-fluid jumbotron-hero">
     <div class="d-flex justify-content-center align-items-center text-center">
       <div style="padding: 20px; max-width: 780px;">
         
-        <p class="hero-pretitle">Hi, I'm</p>
-        <h1 class="hero-name-title">
+        <h1 class="tan-glow-text hero-pretitle">Hi, I'm</h1>
+        <h1 class="tan-glow-text hero-name-title">
           <span class="brand-b">B</span>ella <span class="brand-b">B</span>ertagnolli
         </h1>
         
@@ -180,17 +183,15 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="container-fluid text-center" style="padding-top: 35px; padding-bottom: 35px;">
     <hr>
     <div class="row">
       <div class="text-center col-lg-6 offset-lg-3">
-        <p style="color: black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#" style="color: #2c3e50;">bella bertagnolli</a>[cite: 7]</p>
+        <p style="color: black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#" style="color: #2c3e50;">bella bertagnolli</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
   <script src="siteroot_portfolio/js/popper.min.js"></script>
   <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
