@@ -28,57 +28,71 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #ffffff;
       color: #2c3e50;
+      overflow-x: hidden;
     }
 
     .jumbotron-hero {
       min-height: 100vh;
       margin-bottom: 0;
       background-color: #1a252f;
-      background-image: linear-gradient(rgba(17, 24, 39, 0.40), rgba(17, 24, 39, 0.40)), url('images/computer_img.jpg');
+      background-image: linear-gradient(rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.45)), url('images/computer_img.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 80px;
+      padding: 100px 15px 40px 15px;
     }
 
-    /* Resume-style bold uppercase lettering with solid light-blue offset shadow */
+    .hero-content-box {
+      width: 100%;
+      max-width: 860px;
+      padding: 10px;
+    }
+
+    /* Resume-style bold lettering with responsive offset shadow */
     .resume-styled-title {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       color: #213547;
       text-shadow: 
+        2px 2px 0 #a9d6ce,
         3px 3px 0 #a9d6ce,
-        4px 4px 0 #a9d6ce,
-        5px 5px 12px rgba(0, 0, 0, 0.55);
+        4px 4px 10px rgba(0, 0, 0, 0.55);
       line-height: 1.1;
+      word-break: break-word;
     }
 
     .hero-pretitle {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
+      font-size: clamp(1.4rem, 5vw, 2.2rem);
+      margin-bottom: 6px;
     }
 
     .hero-name-title {
-      font-size: 4rem;
-      margin-bottom: 22px;
+      font-size: clamp(2.2rem, 9vw, 4rem);
+      margin-bottom: 18px;
     }
 
     .hero-tagline {
-      font-size: 1.35rem;
+      font-size: clamp(1rem, 4vw, 1.35rem);
       font-weight: 600;
       color: #ffffff;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
+      line-height: 1.4;
     }
 
     .typed-text-accent {
       color: #ffffff;
       font-weight: 700;
+    }
+
+    .hero-btn-group a {
+      margin: 4px;
+      font-size: clamp(0.8rem, 3vw, 0.92rem);
     }
   </style>
 </head>
@@ -106,8 +120,8 @@
 
   <!-- Jumbotron Hero -->
   <div class="jumbotron jumbotron-fluid jumbotron-hero">
-    <div class="d-flex justify-content-center align-items-center text-center">
-      <div style="padding: 20px; max-width: 860px;">
+    <div class="d-flex justify-content-center align-items-center text-center w-100">
+      <div class="hero-content-box">
         
         <h1 class="resume-styled-title hero-pretitle">Hi, I'm</h1>
         <h1 class="resume-styled-title hero-name-title">Bella Bertagnolli</h1>
@@ -126,14 +140,16 @@
           })
         </script>
 
-        <p class="mt-4">
-          <a class="btn btn-outline-light btn-sm" href="Resume.html" role="button">Check out my resume here</a>
-          <a class="btn btn-outline-light btn-sm" href="about.html" role="button">Learn more about me here</a>
-        </p>
-        <p>
-          <a class="btn btn-outline-light btn-sm" href="https://github.com/ibertagnolli" role="button" target="_blank">GitHub</a>
-          <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" role="button" target="_blank">LinkedIn</a>
-        </p>
+        <div class="hero-btn-group mt-3">
+          <p class="mb-2">
+            <a class="btn btn-outline-light btn-sm" href="Resume.html" role="button">Check out my resume here</a>
+            <a class="btn btn-outline-light btn-sm" href="about.html" role="button">Learn more about me here</a>
+          </p>
+          <p class="mb-0">
+            <a class="btn btn-outline-light btn-sm" href="https://github.com/ibertagnolli" role="button" target="_blank">GitHub</a>
+            <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" role="button" target="_blank">LinkedIn</a>
+          </p>
+        </div>
 
       </div>
     </div>

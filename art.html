@@ -16,10 +16,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         .art-card {
             border: none;
             background: transparent;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             transition: transform 0.2s ease-in-out;
         }
 
@@ -29,11 +33,17 @@
 
         .art-img-container {
             width: 100%;
-            height: 260px;
+            height: 240px;
             overflow: hidden;
             border-radius: 4px;
             background-color: #f7f5f0;
             cursor: pointer;
+        }
+
+        @media (max-width: 576px) {
+            .art-img-container {
+                height: 170px;
+            }
         }
 
         .art-img-container img {
@@ -48,19 +58,20 @@
         }
 
         .art-caption {
-            padding-top: 12px;
+            padding-top: 8px;
             text-align: left;
         }
 
         .art-title {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             color: #2c3539;
             margin-bottom: 2px;
+            line-height: 1.2;
         }
 
         .art-medium {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #718096;
             margin-bottom: 0;
         }
@@ -108,20 +119,6 @@
             opacity: 1;
             color: #ffffff;
         }
-
-        /* Resume-style bold uppercase lettering with solid light-blue offset shadow */
-        .resume-styled-title {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #213547;
-            text-shadow:
-                3px 3px 0 #a9d6ce,
-                4px 4px 0 #a9d6ce,
-                5px 5px 12px rgba(0, 0, 0, 0.55);
-            line-height: 1.1;
-        }
     </style>
 </head>
 
@@ -138,8 +135,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"> <a class="nav-link" href="about.html" style="color: #4a5568;">About</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="Contact.html" style="color: #4a5568;">Contact</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a>
-                </li>
+                <li class="nav-item"> <a class="nav-link" href="portfolio.html" style="color: #4a5568;">Projects</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="art.html" style="color: #4a5568;">Art</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="Resume.html" style="color: #4a5568;">Resume</a> </li>
                 <li class="nav-item"> <a class="nav-link" href="Blog.html" style="color: #4a5568;">Blog</a> </li>
@@ -147,117 +143,98 @@
         </div>
     </nav>
 
-    <!-- Full Uncropped Painting Header -->
+    <!-- Bright Full Uncropped Header -->
     <div class="position-relative w-100" style="margin-top: 56px; overflow: hidden; background-color: #0b1510;">
-        <!-- Base Painting: Always displays 100% of the image with zero cropping -->
-        <img src="images/art/recline.jpg" alt="Recline by Bella Bertagnolli"
-            style="width: 100%; height: auto; display: block; filter: brightness(0.85);">
+        <img src="images/art/recline.jpg" alt="Recline by Bella Bertagnolli" style="width: 100%; height: auto; display: block; filter: brightness(1.0);">
 
-        <!-- Overlay Content -->
-        <div class="position-absolute d-flex justify-content-center align-items-center text-center"
-            style="top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.25); padding: 20px;">
+        <div class="position-absolute d-flex justify-content-center align-items-center text-center" 
+             style="top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.15); padding: 15px;">
             <div class="text-white">
-                <h1 class="mb-3"
-                    style="color: #f7f5f0; text-shadow: 0 0px 0px rgba(0, 0, 0, 0.0); font-weight: 700; font-size: clamp(1.5rem, 3.5vw, 2.8rem);">
+                <h1 class="mb-2 mb-sm-3" style="color: #f7f5f0; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); font-weight: 700; font-size: clamp(1.3rem, 4.5vw, 2.8rem);">
                     Hello, welcome to my Art Portfolio
                 </h1>
                 <div>
-                    <a class="btn btn-outline-light btn-sm mr-2" href="https://bbinked.etsy.com" role="button"
-                        style="padding: 7px 16px; font-weight: 600; text-shadow: none;">Check out my shop here</a>
-                    <a class="btn btn-outline-light btn-sm" href="about.html" role="button"
-                        style="padding: 7px 16px; font-weight: 600; text-shadow: none;">Learn more about me here</a>
+                    <a class="btn btn-outline-light btn-sm m-1" href="Resume.html" role="button" style="padding: 6px 14px; font-weight: 600; text-shadow: none; backdrop-filter: blur(2px);">Check out my resume here</a>
+                    <a class="btn btn-outline-light btn-sm m-1" href="about.html" role="button" style="padding: 6px 14px; font-weight: 600; text-shadow: none; backdrop-filter: blur(2px);">Learn more about me here</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Gallery Grid -->
-    <div class="container-fluid" style="max-width: 1400px; margin-top: 50px;">
+    <!-- Gallery Section (2 columns on mobile, 4 columns on desktop) -->
+    <div id="gallery-grid" class="container-fluid" style="max-width: 1400px; margin-top: 35px;">
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Lady of the Lake.jpg" data-title="Lady of the Lake">
-                        <img src="/images/art/Lady of the Lake.jpg" alt="Lady of the Lake">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Lady of the Lake.jpg" data-title="Lady of the Lake">
+                        <img src="/images/art/Lady of the Lake.jpg" alt="Lady of the Lake"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Lady of the Lake</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/King Arthur.jpg" data-title="King Arthur">
-                        <img src="/images/art/King Arthur.jpg" alt="King Arthur">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/King Arthur.jpg" data-title="King Arthur">
+                        <img src="/images/art/King Arthur.jpg" alt="King Arthur"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">King Arthur</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Holy Grail.jpg" data-title="Holy Grail">
-                        <img src="/images/art/Holy Grail.jpg" alt="Holy Grail">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Holy Grail.jpg" data-title="Holy Grail">
+                        <img src="/images/art/Holy Grail.jpg" alt="Holy Grail"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Holy Grail</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Excalibur.jpg" data-title="Excalibur">
-                        <img src="/images/art/Excalibur.jpg" alt="Excalibur">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Excalibur.jpg" data-title="Excalibur">
+                        <img src="/images/art/Excalibur.jpg" alt="Excalibur"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Excalibur</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Nimue.jpg" data-title="Nimue">
-                        <img src="/images/art/Nimue.jpg" alt="Nimue">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Nimue.jpg" data-title="Nimue">
+                        <img src="/images/art/Nimue.jpg" alt="Nimue"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Nimue</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/bluesiren.jpg" data-title="Blue Siren">
-                        <img src="/images/art/bluesiren.jpg" alt="Blue Siren">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/bluesiren.jpg" data-title="Blue Siren">
+                        <img src="/images/art/bluesiren.jpg" alt="Blue Siren"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Blue Siren</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="images/DSC_0150.JPG" data-title="Black Lagoon" data-medium="Acrylic on Canvas">
-                        <img src="images/DSC_0150.JPG" alt="Black Lagoon">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/DSC_0150.JPG" data-title="Black Lagoon" data-medium="Acrylic on Canvas">
+                        <img src="images/DSC_0150.JPG" alt="Black Lagoon"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Black Lagoon</div>
@@ -266,24 +243,21 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Hades.png" data-title="Hades">
-                        <img src="/images/art/Hades.png" alt="Hades">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Hades.png" data-title="Hades">
+                        <img src="/images/art/Hades.png" alt="Hades"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Hades</div>
-                        <p class="art-medium">Acrylic on Canvas</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="images/IMG_1921.JPG" data-title="Persephone" data-medium="Acrylic on Canvas">
-                        <img src="images/IMG_1921.JPG" alt="Persephone">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/IMG_1921.JPG" data-title="Persephone" data-medium="Acrylic on Canvas">
+                        <img src="images/IMG_1921.JPG" alt="Persephone"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Persephone</div>
@@ -292,11 +266,10 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/cigarette.jpg" data-title="Cigarette">
-                        <img src="/images/cigarette.jpg" alt="Cigarette">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/cigarette.jpg" data-title="Cigarette">
+                        <img src="/images/cigarette.jpg" alt="Cigarette"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Cigarette</div>
@@ -304,12 +277,10 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="images/IMG_6664.jpeg" data-title="Portrait of Alex 2"
-                        data-medium="Oil & Acrylic on Canvas">
-                        <img src="images/IMG_6664.jpeg" alt="Portrait of Alex 2">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/IMG_6664.jpeg" data-title="Portrait of Alex 2" data-medium="Oil & Acrylic on Canvas">
+                        <img src="images/IMG_6664.jpeg" alt="Portrait of Alex 2"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Portrait of Alex 2</div>
@@ -318,206 +289,176 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Martini_UFO.png" data-title="UFO Martini">
-                        <img src="/images/art/Martini_UFO.png" alt="UFO Martini">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Martini_UFO.png" data-title="UFO Martini">
+                        <img src="/images/art/Martini_UFO.png" alt="UFO Martini"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">UFO Martini</div>
-                        <p class="art-medium">Digital Drawing</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Highball_UFO.png" data-title="UFO Highball">
-                        <img src="/images/art/Highball_UFO.png" alt="UFO Highball">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Highball_UFO.png" data-title="UFO Highball">
+                        <img src="/images/art/Highball_UFO.png" alt="UFO Highball"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">UFO Highball</div>
-                        <p class="art-medium">Digital Drawing</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Baba_Yaga_Coffee.png" data-title="Baba Yaga Coffee">
-                        <img src="/images/art/Baba_Yaga_Coffee.png" alt="Baba Yaga Coffee">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Baba_Yaga_Coffee.png" data-title="Baba Yaga Coffee">
+                        <img src="/images/art/Baba_Yaga_Coffee.png" alt="Baba Yaga Coffee"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Baba Yaga Coffee</div>
-                        <p class="art-medium">Digital Drawing</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Eeel_On_Tap.png" data-title="Eel On Tap">
-                        <img src="/images/art/Eeel_On_Tap.png" alt="Eel On Tap">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Eeel_On_Tap.png" data-title="Eel On Tap">
+                        <img src="/images/art/Eeel_On_Tap.png" alt="Eel On Tap"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Eel On Tap</div>
-                        <p class="art-medium">Digital Drawing</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Death_Decanter.png" data-title="Death Decanter">
-                        <img src="/images/art/Death_Decanter.png" alt="Death Decanter">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Death_Decanter.png" data-title="Death Decanter">
+                        <img src="/images/art/Death_Decanter.png" alt="Death Decanter"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Death Decanter</div>
-                        <p class="art-medium">Digital Drawing</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/UFO_COW.JPG" data-title="UFO Cow">
-                        <img src="/images/art/UFO_COW.JPG" alt="UFO Cow">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/UFO_COW.JPG" data-title="UFO Cow">
+                        <img src="/images/art/UFO_COW.JPG" alt="UFO Cow"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">UFO Cow</div>
-                        <p class="art-medium">Digital Drawing</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/void.JPG" data-title="Void">
-                        <img src="/images/art/void.JPG" alt="Void">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/void.JPG" data-title="Void">
+                        <img src="/images/art/void.JPG" alt="Void"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Void</div>
-                        <p class="art-medium">Plaster, wood and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/HornsFront.JPG" data-title="Horns (Front)">
-                        <img src="/images/art/HornsFront.JPG" alt="Horns (Front)">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/HornsFront.JPG" data-title="Horns (Front)">
+                        <img src="/images/art/HornsFront.JPG" alt="Horns (Front)"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Horns (Front)</div>
-                        <p class="art-medium">Plaster, wood and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/HornsBack.JPG" data-title="Horns (Back)">
-                        <img src="/images/art/HornsBack.JPG" alt="Horns (Back)">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/HornsBack.JPG" data-title="Horns (Back)">
+                        <img src="/images/art/HornsBack.JPG" alt="Horns (Back)"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Horns (Back)</div>
-                        <p class="art-medium">Plaster, wood and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/undergrowth_up_front.jpg" data-title="Undergrowth (Front)">
-                        <img src="/images/art/undergrowth_up_front.jpg" alt="Undergrowth (Front)">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/undergrowth_up_front.jpg" data-title="Undergrowth (Front)">
+                        <img src="/images/art/undergrowth_up_front.jpg" alt="Undergrowth (Front)"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Undergrowth (Front)</div>
-                        <p class="art-medium">hourglass, clay, wood, and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/undergrowth_down_back.jpg" data-title="Undergrowth (Back)">
-                        <img src="/images/art/undergrowth_down_back.jpg" alt="Undergrowth (Back)">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/undergrowth_down_back.jpg" data-title="Undergrowth (Back)">
+                        <img src="/images/art/undergrowth_down_back.jpg" alt="Undergrowth (Back)"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Undergrowth (Back)</div>
-                        <p class="art-medium">hourglass, clay, wood, and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/Under_the_surface_front.jpg" data-title="Under the Surface (Front)">
-                        <img src="/images/art/Under_the_surface_front.jpg" alt="Under the Surface (Front)">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/Under_the_surface_front.jpg" data-title="Under the Surface (Front)">
+                        <img src="/images/art/Under_the_surface_front.jpg" alt="Under the Surface (Front)"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Under the Surface (Front)</div>
-                        <p class="art-medium">Plaster, wood, and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/under_the_surface_back.jpg" data-title="Under the Surface (Back)">
-                        <img src="/images/art/under_the_surface_back.jpg" alt="Under the Surface (Back)">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/under_the_surface_back.jpg" data-title="Under the Surface (Back)">
+                        <img src="/images/art/under_the_surface_back.jpg" alt="Under the Surface (Back)"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Under the Surface (Back)</div>
-                        <p class="art-medium">Plaster, wood, and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="/images/art/caged_butterfly.JPG" data-title="Caged Butterfly">
-                        <img src="/images/art/caged_butterfly.JPG" alt="Caged Butterfly">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="/images/art/caged_butterfly.JPG" data-title="Caged Butterfly">
+                        <img src="/images/art/caged_butterfly.JPG" alt="Caged Butterfly"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Caged Butterfly</div>
-                        <p class="art-medium">metal rods, wood, and acrylic </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="images/art/Ray_Chalk.HEIC" data-title="Ren Chalk art" data-medium="Chalk on Cement">
-                        <img src="images/art/Ray_Chalk.HEIC" alt="Ren">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/art/Ray_Chalk.HEIC" data-title="Rei Chalk art" data-medium="Chalk on Cement">
+                        <img src="images/art/Ray_Chalk.HEIC" alt="Rei"[cite: 3]>
                     </div>
                     <div class="art-caption">
-                        <div class="art-title">Ray Chalk art</div>
+                        <div class="art-title">Rei Chalk art</div>
                         <p class="art-medium">Chalk on Cement</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="art-card">
-                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal"
-                        data-img="images/art/Link_Chalk.JPG" data-title="Link Chalk art" data-medium="Chalk on Cement">
-                        <img src="images/art/Link_Chalk.JPG" alt="Link">
+                    <div class="art-img-container" data-toggle="modal" data-target="#imageModal" data-img="images/art/Link_Chalk.JPG" data-title="Link Chalk art" data-medium="Chalk on Cement">
+                        <img src="images/art/Link_Chalk.JPG" alt="Link"[cite: 3]>
                     </div>
                     <div class="art-caption">
                         <div class="art-title">Link Chalk art</div>
@@ -534,8 +475,7 @@
         <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content lightbox-content">
                 <div class="modal-body lightbox-body text-center position-relative">
-                    <button type="button" class="close-lightbox" data-dismiss="modal"
-                        aria-label="Close">&times;</button>
+                    <button type="button" class="close-lightbox" data-dismiss="modal" aria-label="Close">&times;</button>
                     <div class="w-100">
                         <img src="" alt="Full View" class="lightbox-img" id="modalImage">
                         <div class="lightbox-caption" id="modalCaption"></div>
@@ -549,8 +489,7 @@
         <hr>
         <div class="row">
             <div class="text-center col-lg-6 offset-lg-3">
-                <p style="color:black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#">bella
-                        bertagnolli</a></p>
+                <p style="color:black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#">bella bertagnolli</a>[cite: 3]</p>
             </div>
         </div>
     </footer>
@@ -573,6 +512,13 @@
                 }
                 $('#modalCaption').text(captionText);
             });
+
+            setTimeout(function () {
+                var targetOffset = $('#gallery-grid').offset().top - 80;
+                $('html, body').animate({
+                    scrollTop: targetOffset
+                }, 900);
+            }, 1000);
         });
     </script>
 </body>
