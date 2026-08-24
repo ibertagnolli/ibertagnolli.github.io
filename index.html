@@ -5,24 +5,103 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Isabella Bertagnolli</title>
+  <title>Bella Bertagnolli</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="css/portfolio.css" rel="stylesheet">
 
-    <!--  Favicon --> 
+  <!-- Favicon --> 
   <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="images/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #ffffff;
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    .jumbotron-hero {
+      min-height: 100vh;
+      margin-bottom: 0;
+      background-color: #1a252f;
+      background-image: linear-gradient(rgba(17, 24, 39, 0.45), rgba(17, 24, 39, 0.45)), url('images/computer_img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 15px 40px 15px;
+    }
+
+    .hero-content-box {
+      width: 100%;
+      max-width: 860px;
+      padding: 10px;
+    }
+
+    /* Resume-style bold lettering with responsive offset shadow */
+    .resume-styled-title {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #213547;
+      text-shadow: 
+        2px 2px 0 #a9d6ce,
+        3px 3px 0 #a9d6ce,
+        4px 4px 10px rgba(0, 0, 0, 0.55);
+      line-height: 1.1;
+      word-break: break-word;
+    }
+
+    .hero-pretitle {
+      font-size: clamp(1.4rem, 5vw, 2.2rem);
+      margin-bottom: 6px;
+    }
+
+    .hero-name-title {
+      font-size: clamp(2.2rem, 9vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 4vw, 1.35rem);
+      font-weight: 600;
+      color: #ffffff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+
+    .typed-text-accent {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .hero-btn-group a {
+      margin: 4px;
+      font-size: clamp(0.8rem, 3vw, 0.92rem);
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top"
     style="background-color: #f7f5f0; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-    <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Isabella Bertagnolli</a>
+    <a class="navbar-brand" href="index.html" style="color: #2c3e50; font-weight: 600;">Bella Bertagnolli</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,101 +117,58 @@
       </ul>
     </div>
   </nav>
-  <!-- Jumbotron -->
-  <!---<div class="p-5 text-center bg-image rounded-3" style="
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-	padding-top: 30px;
-    height: 400px;
-  "> --->
-  <div class="jumbotron jumbotron-fluid justify-content-center align-items-center">
-    <!--
-<div class=" p-5 text-center bg-image rounded-3" >
-	<img class="bg-image" src="images/ezgif.com-resize.jpg" alt="hands on keyboard">
--->
-    <!--<div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">-->
-    <div class="d-flex justify-content-center align-items-center text-center h-50">
-      <div class="text-white" style="padding-top: 180px; filter: brightness(1.0);"> <br>
-        <br>
-        <h1 style="align-content:left ">Hi, I'm </h1>
-        <div class="text-box">
-          <h1> Isabella Bertagnolli</h1>
-          <h3>I'm passionate about <span class="auto-input"></span></h3>
-        </div>
+
+  <!-- Jumbotron Hero -->
+  <div class="jumbotron jumbotron-fluid jumbotron-hero">
+    <div class="d-flex justify-content-center align-items-center text-center w-100">
+      <div class="hero-content-box">
+        
+        <h1 class="resume-styled-title hero-pretitle">Hi, I'm</h1>
+        <h1 class="resume-styled-title hero-name-title">Bella Bertagnolli</h1>
+        
+        <h3 class="hero-tagline">
+          I'm passionate about <span class="auto-input typed-text-accent"></span>
+        </h3>
+
         <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
         <script>
           var typed = new Typed(".auto-input", {
-            strings: ["Design", "Software Development", "Machine Learning", "Algorithms", "Dev ops", "Release Tooling", "Data Engineering", "Systems Design"],
-            typeSpeed: 100,
-            backSpeed: 100,
+            strings: ["Design", "Software Development", "Machine Learning", "Algorithms", "DevOps", "Release Tooling", "Data Engineering", "Systems Design"],
+            typeSpeed: 90,
+            backSpeed: 55,
             loop: true
           })
         </script>
-        <p>
-          <a class="btn btn-outline-light btn-sm" href="Resume.html" role="button">Check out my resume here</a> <a
-            class="btn btn-outline-light btn-sm" href="about.html" role="button">Learn more about me here</a>
-        </p>
-        <p>
-          <a class="btn btn-outline-light btn-sm" href="https://github.com/ibertagnolli" role="button" target="_blank">
-            Github</a>
-          <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/"
-            role="button" target="_blank"> LinkedIn</a>
-        </p>
-      </div>
-    </div>
-  </div>
-  <!--</div>-->
-  <!-- Jumbotron -->
-  <!-- <div class="container">
-  <hr>
-  <br>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card bg-dark"> <img class="card-img-top" src="images/Profile Pictures black background.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Women In Computing</h5>
-          <p class="card-text">I have been an officer for the women in computing club for 2 years. This year I am the clubs treasurer.</p>
-          <a href="leadership.html" class="btn btn-light">About</a> </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card bg-dark"> <img class="card-img-top" src="images/IMG_2952.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Mountain Biking</h5>
-          <p class="card-text">Outside of school I love to get outdoors and explore. I've been mountain biking for over 8 years now. </p>
-          <a href="https://www.utahmtb.org/" class="btn btn-light">About</a> </div>
-      </div>
-    </div>
-    <br>
-    <br/>
-    <div class="col-md-4">
-      <div class="card bg-dark"> <img class="card-img-top" src="images/DSC_0150.JPG" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Art</h5>
-          <p class="card-text">I have been painting and drawing for over 10 years. If you want to check out some of my work click below.</p>
-          <a href="portfolio.html" class="btn btn-light">About</a> </div>
-      </div>
-    </div>
-  </div>
-  <br/>
-  <br/>
-</div> -->
-  <br>
-  <hr>
-  <div class="row">
-    <div class="text-center col-lg-6 offset-lg-3 ">
-      <p style="color: black;">Copyright &copy; 2021 &middot; All Rights Reserved &middot; <a href="#">My Website</a>
-      </p>
-    </div>
-  </div>
-  <p><!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <div class="hero-btn-group mt-3">
+          <p class="mb-2">
+            <a class="btn btn-outline-light btn-sm" href="Resume.html" role="button">Check out my resume here</a>
+            <a class="btn btn-outline-light btn-sm" href="about.html" role="button">Learn more about me here</a>
+          </p>
+          <p class="mb-0">
+            <a class="btn btn-outline-light btn-sm" href="https://github.com/ibertagnolli" role="button" target="_blank">GitHub</a>
+            <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" role="button" target="_blank">LinkedIn</a>
+          </p>
+        </div>
 
-    <script src="siteroot_portfolio/js/popper.min.js"></script>
-    <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
-  </p>
-  <p>&nbsp; </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container-fluid text-center" style="padding-top: 35px; padding-bottom: 35px;">
+    <hr>
+    <div class="row">
+      <div class="text-center col-lg-6 offset-lg-3">
+        <p style="color: black;">Copyright &copy; 2026 &middot; All Rights Reserved &middot; <a href="#" style="color: #2c3e50;">bella bertagnolli</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="siteroot_portfolio/js/jquery-3.4.1.min.js"></script>
+  <script src="siteroot_portfolio/js/popper.min.js"></script>
+  <script src="siteroot_portfolio/js/bootstrap-4.4.1.js"></script>
 </body>
 
 </html>
