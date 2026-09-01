@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - ibertagnolli/updates
 
 permissions:
   contents: read
