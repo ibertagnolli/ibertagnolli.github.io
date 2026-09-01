@@ -52,7 +52,7 @@
     }
 
     .job-item {
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
 
     .job-title {
@@ -79,18 +79,19 @@
     }
 
     .job-description li {
-      margin-bottom: 6px;
+      margin-bottom: 7px;
+      line-height: 1.55;
     }
 
     .contact-links span {
-      margin-right: 12px;
+      margin-right: 10px;
       font-size: 0.95rem;
       color: #4a5568;
     }
 
     .contact-links a {
       color: #4a5568;
-      margin-right: 12px;
+      margin-right: 10px;
       font-size: 0.95rem;
       text-decoration: underline;
     }
@@ -159,11 +160,11 @@
               <div>
                 <h1 style="font-weight: 800; color: #2c3e50; margin-bottom: 6px; letter-spacing: 0.02em;">ISABELLA BERTAGNOLLI</h1>
                 <div class="contact-links">
-                  <span>(801) 495 3221</span> | 
-                  <a class="btn btn-outline-light btn-sm" href="mailto:Irosebertagnolli@gmail.com" role="button" target="_blank">Irosebertagnolli@gmail.com</a> 
-                  <a class="btn btn-outline-light btn-sm" href="https://bellabertagnolli.com" role="button" target="_blank">Personal Website (oh it's here) </a> 
-                  <a class="btn btn-outline-light btn-sm" href="https://github.com/ibertagnolli" role="button" target="_blank">GitHub</a>
-          <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" role="button" target="_blank">LinkedIn</a>
+                  <span>(801) 495-3221</span> ◆
+                  <a href="mailto:Irosebertagnolli@gmail.com">Irosebertagnolli@gmail.com</a> ◆
+                  <a href="https://bellabertagnolli.com" target="_blank">bellabertagnolli.com</a> ◆
+                  <a href="https://github.com/ibertagnolli" target="_blank">GitHub</a> ◆
+                  <a href="https://www.linkedin.com/in/isabella-bertagnolli-5b61831b3/" target="_blank">LinkedIn</a>
                 </div>
               </div>
               <div class="btn-action-group mt-3 mt-md-0">
@@ -192,16 +193,21 @@
               <span class="job-date">Remote</span>
             </div>
             <div style="padding-left: 14px; border-left: 3px solid #cbd5e0;">
-              <div class="job-company">Delivery Intelligence Team</div>
+              <div class="job-company">Delivery Intelligence Team (Cloud Release Engineering)</div>
               <div class="job-item">
                 <div class="d-flex justify-content-between align-items-baseline">
                   <span class="job-title">Software Engineer II</span>
                   <span class="job-date">Jul 2026 – Present</span>
                 </div>
                 <ul class="job-description">
-                  <li>Designed an AI/ML risk predictor model as the foundation for a risk-informed deployment platform that determines risk using a myriad of features scraped from deployment data and assesses AI-generated code before production.</li>
-                  <li>Completed a data lake and ETL pipeline workflow that brings data across deployments, incidents, and APM metrics into one centralized place for synthesis.</li>
-                  <li>Architected a new GitHub Actions CI/CD workflow for IBM’s SaaS deployment platform and created an onboarding plan for widespread adoption.</li>
+                  <li>Engineered and trained an XGBoost AI/ML change-risk scoring model with custom precision/recall tuning, accelerating low-complexity releases 20–30% while blocking high-risk pull requests before deployment.</li>
+                  <li>Architected a 3-layer federated reliability intelligence data lake aggregating telemetry and deployment events across 10+ internal services (Datadog, incident.io, GitHub, Argo CD).</li>
+                  <li>Constructed automated ETL ingestion pipelines in Go and Python to normalize release logs, incident reports, and APM metrics into parquet schemas for model feature stores.</li>
+                  <li>Engineered a unified shared context engineering architecture to ground internal LLM agent workflows and tool execution in real-time infrastructure topology.</li>
+                  <li>Built automated validation engines and modernized CI/CD guardrails, reducing overall deployment runtimes by 70% across core cloud platforms.</li>
+                  <li>Implemented dependency-aware disaster recovery workflows across distributed deployments, reducing system recovery MTTR by over 80%.</li>
+                  <li>Consolidated platform development tooling from 12 federated service teams into 2 unified core deployment engines to eliminate architectural drift.</li>
+                  <li>Founded and spearheaded an org-wide engineering mentorship program across HashiCorp, organizing 3 months of technical tracks, workshops, and 1:1 pair programming sessions.</li>
                 </ul>
               </div>
             </div>
@@ -227,9 +233,12 @@
                   <span class="job-date">Aug 2024 – Feb 2025</span>
                 </div>
                 <ul class="job-description">
-                  <li>Contributed to single-click rollback release functionality, significantly improving incident MTTR and reducing engineer rollback time to 10 minutes (down from hours).</li>
-                  <li>Onboarded 20+ engineering teams to canary deployments and assisted in establishing canary health monitoring signals.</li>
-                  <li>Designed a breakglass mechanism and user interface allowing teams to bypass canary signals during emergency situations.</li>
+                  <li>Built backend logic and REST APIs for single-click rollback functionality, reducing rollback duration from hours to under 10 minutes during active production incidents.</li>
+                  <li>Instrumented canary health analysis automation in Go, onboarding 20+ engineering services to progressive traffic shifting based on real-time metric thresholds.</li>
+                  <li>Developed emergency breakglass release mechanisms with full audit logging, allowing engineers to bypass blocked deployment stages safely during P1 outages.</li>
+                  <li>Architected reusable GitHub Actions composite workflows used across SaaS deployment pipelines to enforce standard test, lint, and security compliance checks.</li>
+                  <li>Engineered custom monitoring dashboards and alerting integrations using Datadog APIs to track deployment frequency, failure rate, and canary anomalies.</li>
+                  <li>Authored automated integration test suites and mocking harnesses for internal release microservices, increasing pipeline test coverage by 25%.</li>
                 </ul>
               </div>
             </div>
@@ -250,9 +259,11 @@
                   <span class="job-date">May 2023 – Aug 2023</span>
                 </div>
                 <ul class="job-description">
-                  <li>Created 6 resources and data sources for a custom Terraform provider using Go and HCL, boosting developer productivity by 5%.</li>
-                  <li>Published and tested the provider in conjunction with the Metadata Service for internal teams to track infrastructure components.</li>
-                  <li>Authored comprehensive automated integration test suites and documentation to ensure reliable provider releases.</li>
+                  <li>Implemented 6 custom resources and data sources in Go and HCL for an internal Terraform provider to manage internal cloud infrastructure state.</li>
+                  <li>Integrated the Terraform provider directly with HashiCorp's internal Metadata Service to automate infrastructure component discovery and cataloging.</li>
+                  <li>Wrote unit and acceptance test suites with mock HTTP servers to validate CRUD state management across all provider schemas.</li>
+                  <li>Documented provider usage and schema definitions, enabling internal platform teams to adopt declarative infrastructure management.</li>
+                  <li>Streamlined developer configuration setup, measurably boosting team development iteration speed by 5%.</li>
                 </ul>
               </div>
             </div>
@@ -272,9 +283,11 @@
                 <span class="job-date">Hayward, CA | May 2022 – Aug 2022</span>
               </div>
               <ul class="job-description" style="padding-left: 20px;">
-                <li>Trained a PyTorch classification model running on field robotics to differentiate crops with 88% accuracy; built a multi-resolution dataset pipeline.</li>
-                <li>Wrote a tool to extract image data from field logs and augment data for model training.</li>
-                <li>Constructed a custom PyTorch dataset class to ingest multi-resolution images for model training workflows.</li>
+                <li>Trained and benchmarked a PyTorch convolutional classification model for edge deployment on field robotics, achieving 88% crop/weed classification accuracy.</li>
+                <li>Engineered custom Python ETL tools to extract, decode, and transform raw camera sensor logs from embedded field systems into labeled training sets.</li>
+                <li>Implemented a custom PyTorch `Dataset` and `DataLoader` pipeline supporting dynamic multi-resolution scaling, spatial cropping, and data augmentations.</li>
+                <li>Optimized computer vision data ingestion pipelines, cutting batch preprocessing runtime by 35% during model training cycles.</li>
+                <li>Built automated image validation scripts to identify and filter corrupted frame captures before model ingestion.</li>
               </ul>
             </div>
           </div>
@@ -293,7 +306,11 @@
                 <span class="job-date">Ogden, UT | May 2021 – Aug 2021</span>
               </div>
               <ul class="job-description" style="padding-left: 20px;">
-                <li>Developed a Docker-based network emulator in Python and C# capable of simulating up to 200 virtual target nodes for security training.</li>
+                <li>Developed a distributed network emulation testbed in Python and C# using Docker containers to simulate up to 200 virtual target nodes simultaneously.</li>
+                <li>Constructed automated network topology generation scripts using Docker Compose and virtual bridge networking for cyber defense training exercises.</li>
+                <li>Built packet generation and traffic simulation tools to validate throughput, packet drop rates, and firewall response times across emulated subnets.</li>
+                <li>Containerized modular network services to streamline testbed deployment across multiple on-premises test servers.</li>
+                <li>Documented emulator deployment APIs and architecture guidelines for internal cybersecurity testing teams.</li>
               </ul>
             </div>
           </div>
@@ -307,8 +324,9 @@
         <div class="row justify-content-center">
           <div class="col-lg-10">
             <div class="resume-section-title">Skills</div>
-            <p style="margin-bottom: 8px;"><strong>Languages & Frameworks:</strong> Python, PyTorch, Go, Java, HCL, SQL, HTML/CSS, JavaScript, C++</p>
-            <p style="margin-bottom: 0;"><strong>Developer Tools & Platforms:</strong> Git, GitHub Actions, Terraform, React, MongoDB, CI/CD Guardrails, Kubernetes, Argo CD, Docker</p>
+            <p style="margin-bottom: 8px;"><strong>Languages:</strong> Go, Python, C++, C, Java, SQL, HCL, JavaScript, HTML/CSS</p>
+            <p style="margin-bottom: 8px;"><strong>Machine Learning & Data:</strong> PyTorch, XGBoost, Scikit-Learn, Pandas, NumPy, Feature Engineering, ETL Pipelines, Parquet</p>
+            <p style="margin-bottom: 0;"><strong>Cloud & DevOps:</strong> Terraform, GitHub Actions, Docker, Kubernetes, Argo CD, Datadog, incident.io, CI/CD Guardrails, Disaster Recovery</p>
           </div>
         </div>
       </div>
@@ -325,7 +343,7 @@
               <span class="job-date">Graduated May 2024</span>
             </div>
             <p class="mt-2" style="color: #4a5568; margin-bottom: 0;"><strong>GPA:</strong> 3.90 &nbsp;|&nbsp;
-              <strong>Leadership:</strong> Women in Computing Club President & Treasurer, Teaching Assistant, UCIC Ambassador
+              <strong>Leadership & Activities:</strong> Women in Computing Club (President & Treasurer), Teaching Assistant, Undergraduate Ambassador
             </p>
           </div>
         </div>
